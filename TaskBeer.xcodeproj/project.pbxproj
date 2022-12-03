@@ -7,19 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B92F3002916FD9800FDC9CA /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F2FF2916FD9800FDC9CA /* TaskTableViewCell.swift */; };
+		7B92F3042916FDC500FDC9CA /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F3032916FDC500FDC9CA /* AddTaskViewController.swift */; };
+		7B92F308291702F700FDC9CA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F307291702F700FDC9CA /* RealmManager.swift */; };
+		7B92F30A291702FF00FDC9CA /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F309291702FF00FDC9CA /* TaskModel.swift */; };
+		7B92F30D2917049B00FDC9CA /* UIStackView + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F30C2917049B00FDC9CA /* UIStackView + Extention.swift */; };
+		7B92F3102917067700FDC9CA /* PressButtonProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F30F2917067700FDC9CA /* PressButtonProtocols.swift */; };
+		7B92F31329170BD300FDC9CA /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F31229170BD300FDC9CA /* Notifications.swift */; };
+		7B92F3162917C9CA00FDC9CA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F3152917C9CA00FDC9CA /* SettingViewController.swift */; };
+		7B92F3182917CC7400FDC9CA /* MTUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F3172917CC7400FDC9CA /* MTUserDefaults.swift */; };
+		7B92F33D29197EB600FDC9CA /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F33C29197EB600FDC9CA /* HelpTableViewCell.swift */; };
+		7B92F3402919933800FDC9CA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F33F2919933800FDC9CA /* CalendarViewController.swift */; };
 		7BEABF452916F71500726E5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEABF442916F71500726E5E /* AppDelegate.swift */; };
 		7BEABF472916F71500726E5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEABF462916F71500726E5E /* SceneDelegate.swift */; };
-		7BEABF492916F71500726E5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEABF482916F71500726E5E /* ViewController.swift */; };
+		7BEABF492916F71500726E5E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEABF482916F71500726E5E /* MainViewController.swift */; };
 		7BEABF4C2916F71500726E5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEABF4A2916F71500726E5E /* Main.storyboard */; };
 		7BEABF4E2916F71900726E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BEABF4D2916F71900726E5E /* Assets.xcassets */; };
 		7BEABF512916F71900726E5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEABF4F2916F71900726E5E /* LaunchScreen.storyboard */; };
+		7BEABF5A2916F86700726E5E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7BEABF592916F86700726E5E /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B92F2FF2916FD9800FDC9CA /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		7B92F3032916FDC500FDC9CA /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		7B92F307291702F700FDC9CA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		7B92F309291702FF00FDC9CA /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		7B92F30C2917049B00FDC9CA /* UIStackView + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extention.swift"; sourceTree = "<group>"; };
+		7B92F30F2917067700FDC9CA /* PressButtonProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressButtonProtocols.swift; sourceTree = "<group>"; };
+		7B92F31229170BD300FDC9CA /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		7B92F3152917C9CA00FDC9CA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		7B92F3172917CC7400FDC9CA /* MTUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTUserDefaults.swift; sourceTree = "<group>"; };
+		7B92F33C29197EB600FDC9CA /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
+		7B92F33F2919933800FDC9CA /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		7BEABF412916F71500726E5E /* TaskBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BEABF442916F71500726E5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BEABF462916F71500726E5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7BEABF482916F71500726E5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7BEABF482916F71500726E5E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7BEABF4B2916F71500726E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BEABF4D2916F71900726E5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BEABF502916F71900726E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,12 +54,97 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BEABF5A2916F86700726E5E /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B92F3012916FD9D00FDC9CA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7B92F2FF2916FD9800FDC9CA /* TaskTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7B92F3022916FDA600FDC9CA /* TaskViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BEABF482916F71500726E5E /* MainViewController.swift */,
+				7B92F3032916FDC500FDC9CA /* AddTaskViewController.swift */,
+				7B92F3012916FD9D00FDC9CA /* Cells */,
+			);
+			path = TaskViewControllers;
+			sourceTree = "<group>";
+		};
+		7B92F305291702DA00FDC9CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7B92F309291702FF00FDC9CA /* TaskModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7B92F306291702E800FDC9CA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7B92F307291702F700FDC9CA /* RealmManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7B92F30B2917048F00FDC9CA /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				7B92F30C2917049B00FDC9CA /* UIStackView + Extention.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		7B92F30E2917065B00FDC9CA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7B92F30F2917067700FDC9CA /* PressButtonProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7B92F31129170BC500FDC9CA /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				7B92F31229170BD300FDC9CA /* Notifications.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		7B92F3142917C59600FDC9CA /* SettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7B92F3152917C9CA00FDC9CA /* SettingViewController.swift */,
+				7B92F3172917CC7400FDC9CA /* MTUserDefaults.swift */,
+				7B92F33B29197E9900FDC9CA /* Cell */,
+			);
+			path = SettingViewController;
+			sourceTree = "<group>";
+		};
+		7B92F33B29197E9900FDC9CA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7B92F33C29197EB600FDC9CA /* HelpTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7B92F33E2919931F00FDC9CA /* CalendarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7B92F33F2919933800FDC9CA /* CalendarViewController.swift */,
+			);
+			path = CalendarViewController;
+			sourceTree = "<group>";
+		};
 		7BEABF382916F71500726E5E = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +166,14 @@
 			children = (
 				7BEABF442916F71500726E5E /* AppDelegate.swift */,
 				7BEABF462916F71500726E5E /* SceneDelegate.swift */,
-				7BEABF482916F71500726E5E /* ViewController.swift */,
+				7B92F3022916FDA600FDC9CA /* TaskViewControllers */,
+				7B92F3142917C59600FDC9CA /* SettingViewController */,
+				7B92F33E2919931F00FDC9CA /* CalendarViewController */,
+				7B92F305291702DA00FDC9CA /* Models */,
+				7B92F306291702E800FDC9CA /* Service */,
+				7B92F31129170BC500FDC9CA /* Notifications */,
+				7B92F30E2917065B00FDC9CA /* Protocols */,
+				7B92F30B2917048F00FDC9CA /* Extentions */,
 				7BEABF4A2916F71500726E5E /* Main.storyboard */,
 				7BEABF4D2916F71900726E5E /* Assets.xcassets */,
 				7BEABF4F2916F71900726E5E /* LaunchScreen.storyboard */,
@@ -83,6 +198,9 @@
 			dependencies = (
 			);
 			name = TaskBeer;
+			packageProductDependencies = (
+				7BEABF592916F86700726E5E /* RealmSwift */,
+			);
 			productName = TaskBeer;
 			productReference = 7BEABF412916F71500726E5E /* TaskBeer.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 7BEABF382916F71500726E5E;
+			packageReferences = (
+				7BEABF582916F86700726E5E /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 7BEABF422916F71500726E5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +259,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BEABF492916F71500726E5E /* ViewController.swift in Sources */,
+				7B92F31329170BD300FDC9CA /* Notifications.swift in Sources */,
+				7B92F3162917C9CA00FDC9CA /* SettingViewController.swift in Sources */,
+				7B92F30D2917049B00FDC9CA /* UIStackView + Extention.swift in Sources */,
+				7B92F3182917CC7400FDC9CA /* MTUserDefaults.swift in Sources */,
+				7B92F3002916FD9800FDC9CA /* TaskTableViewCell.swift in Sources */,
+				7B92F3102917067700FDC9CA /* PressButtonProtocols.swift in Sources */,
+				7BEABF492916F71500726E5E /* MainViewController.swift in Sources */,
 				7BEABF452916F71500726E5E /* AppDelegate.swift in Sources */,
+				7B92F33D29197EB600FDC9CA /* HelpTableViewCell.swift in Sources */,
 				7BEABF472916F71500726E5E /* SceneDelegate.swift in Sources */,
+				7B92F3042916FDC500FDC9CA /* AddTaskViewController.swift in Sources */,
+				7B92F308291702F700FDC9CA /* RealmManager.swift in Sources */,
+				7B92F3402919933800FDC9CA /* CalendarViewController.swift in Sources */,
+				7B92F30A291702FF00FDC9CA /* TaskModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +492,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7BEABF582916F86700726E5E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7BEABF592916F86700726E5E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BEABF582916F86700726E5E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7BEABF392916F71500726E5E /* Project object */;
 }

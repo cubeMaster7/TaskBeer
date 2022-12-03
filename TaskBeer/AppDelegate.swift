@@ -6,14 +6,32 @@
 //
 
 import UIKit
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let notifications = Notifications()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //notification
+        notifications.requestAutorization()
+        notifications.notificationCenter.delegate = notifications
+        
+        //настройки рилма
+        let config = Realm.Configuration(
+            //тут мы устанавливаем новую версию конфигурации. Меняем цифру в случае если поменяли что-то в базе
+            schemaVersion: 2,
+    
+            migrationBlock: {migration,oldSchemaVersion in
+                if (oldSchemaVersion < 1) {
+                    
+                }
+            })
+        Realm.Configuration.defaultConfiguration = config
+        
         return true
     }
 
