@@ -119,7 +119,10 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
         case [0,3]:
-            print("forth pressed")
+            let alert = UIAlertController(title: "Копилка в разработке", message: "Спасибо, котятки, но пока что вы можете только написать разработчику", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Плак-плак", style: .default, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
         default:
             print("SMTH")
         }

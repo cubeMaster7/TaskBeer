@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //настройки рилма
         let config = Realm.Configuration(
             //тут мы устанавливаем новую версию конфигурации. Меняем цифру в случае если поменяли что-то в базе
-            schemaVersion: 2,
+            schemaVersion: 3,
     
             migrationBlock: {migration,oldSchemaVersion in
                 if (oldSchemaVersion < 1) {

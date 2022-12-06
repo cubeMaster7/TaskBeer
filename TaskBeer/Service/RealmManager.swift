@@ -8,54 +8,57 @@
 import Foundation
 import RealmSwift
 
+let realm = try! Realm()
 
 class RealmManager {
     
-    static let shared = RealmManager()
-    
-    private init() {}
-    
-    let localRealm = try! Realm()
+//    static let shared = RealmManager()
+//
+//    private init() {}
+//
+//    let localRealm = try! Realm()
     
     
     //MARK: - методы для TaskModel
-    func saveTaskModel(model: TaskModel) {
-        try! localRealm.write {
-            localRealm.add(model)
+    static func saveTaskModel(model: TaskModel) {
+        try! realm.write {
+            realm.add(model)
         }
     }
     
     
-    func deleteTaskModel(model: TaskModel) {
-        try! localRealm.write{
-            localRealm.delete(model)
+    static func deleteTaskModel(model: TaskModel) {
+        try! realm.write{
+            realm.delete(model)
         }
     }
     
-    func updateTaskModel(model: TaskModel, title: String, priority: Int) {
-        try! localRealm.write{
+    static  func updateTaskModel(model: TaskModel, title: String, priority: Int) {
+        try! realm.write{
             model.title = title
             model.priority = priority
         }
     }
     
-    func updateReadyTaskButtonModel(task: TaskModel, bool: Bool) {
-        try! localRealm.write {
+    static func updateReadyTaskButtonModel(task: TaskModel, bool: Bool) {
+        try! realm.write {
             task.taskReady = bool
         }
     }
     
     //MARK: - методы для CalendarModel
     
-//    func saveCalendarModel(model: CalendarModel){
-//        try! localRealm.write{
-//            localRealm.add(model)
-//        }
-//    }
-//
-//    func deleteCalendarModel(model: CalendarModel) {
-//        try! localRealm.write {
-//            localRealm.delete(model)
-//        }
-//    }
+    static func saveModel(model: CalendarModel) {
+         try! realm.write {
+             realm.add(model)
+         }
+     }
+     
+     static func deleteModel(model: CalendarModel) {
+         try! realm.write {
+             realm.delete(model)
+         }
+     }
+
+    
 }

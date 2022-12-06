@@ -17,7 +17,7 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var showDateSwitch: UISwitch!
     @IBOutlet weak var doneButton: UIButton!
     
-    //    var taskModel = TaskModel()
+
     let localRealm = try! Realm()
     var selectedIndex: TaskModel? // это для редактирования задачи
     let taskModel = TaskModel()
@@ -54,9 +54,7 @@ class AddTaskViewController: UIViewController {
     
     
     private func textFieldSetup() {
-        //        if selectedIndex != nil {
-        //            taskTextField.text = selectedIndex?.title
-        //        }
+
         taskTextField.becomeFirstResponder()
         taskTextField.clearButtonMode = .whileEditing
         taskTextField.leftView = UIView(frame:CGRect(x: 0, y: 0, width: 15, height: taskTextField.frame.height))
@@ -67,69 +65,77 @@ class AddTaskViewController: UIViewController {
         tapCloseKeyboard()
     }
     
-    //    private func setModel() {
-    ////        if selectedIndex == nil {
-    ////            if let text = taskTextField.text, !text.isEmpty {
-    ////                taskModel.title = text
-    ////                taskModel.taskDate = datePicker.date
-    ////                taskModel.priority = Int(segmentedControl.selectedSegmentIndex)
-    //////                RealmManager.shared.saveTaskModel(model: taskModel)
-    //////                navigationController?.popViewController(animated: true)
-    ////            } else {
-    //////                isTextFieldIsEmpty()
-    ////            }
-    ////
-    ////        } else {
-    ////            //update
-    ////            let results = localRealm.objects(TaskModel.self)
-    ////
-    ////            if let result = results.first {
-    ////                try! localRealm.write {
-    ////                    guard let text = taskTextField.text, !text.isEmpty else {return}
-    ////                    result.title = text
-    ////                    result.priority = Int(segmentedControl.selectedSegmentIndex)
-    ////                }
-    ////            }
-    ////        }
-    //    }
+ 
+    func saveButtonTapped() {
+   
+           notificationCenter.getNotificationSettings { [self] (settings) in
+               DispatchQueue.main.async {
+                   if settings.authorizationStatus == .authorized {
+                       if let text = taskTextField.text, !text.isEmpty {
+                           notificationLogic()
+                   
+                           taskModel.title = taskTextField.text!
+                           taskModel.taskDate = datePicker.date
+                           taskModel.priority = Int(segmentedControl.selectedSegmentIndex)
+                   
+                           if selectedIndex != nil {
+                               try! localRealm.write {
+                                   selectedIndex?.title = taskTextField.text!
+                                   selectedIndex?.taskDate = datePicker.date
+                                   selectedIndex?.priority = Int(segmentedControl.selectedSegmentIndex)
+                               }
+                           } else {
+                   
+                               RealmManager.saveTaskModel(model: taskModel)
+                           }
+                       } else {
+                           isTextFieldIsEmpty()
+                       }
+//                       navigationController?.popViewController(animated: true)
+                   } else {
+                       ifAuthorisationDenied()
+                   }
+               }
+           }
+       }
     
-    private func saveModel() {
-        //        RealmManager.shared.saveTaskModel(model: taskModel)
-        notificationLogic()
-        
-        taskModel.title = taskTextField.text!
-        taskModel.taskDate = datePicker.date
-        taskModel.priority = Int(segmentedControl.selectedSegmentIndex)
-        
-        if selectedIndex != nil {
-            try! localRealm.write {
-                selectedIndex?.title = taskTextField.text!
-                selectedIndex?.taskDate = datePicker.date
-                selectedIndex?.priority = Int(segmentedControl.selectedSegmentIndex)
-            }
-        } else {
-            RealmManager.shared.saveTaskModel(model: taskModel)
-        }
-    }
-    
-    @IBAction func saveButtonTapped(_ sender: Any) {
-        
-        notificationCenter.getNotificationSettings { [self] (settings) in
-            DispatchQueue.main.async {
-                if settings.authorizationStatus == .authorized {
-                    if let text = taskTextField.text, !text.isEmpty {
-                        //                        setModel()
-                        saveModel()
-                    } else {
-                        isTextFieldIsEmpty()
-                    }
-                    navigationController?.popViewController(animated: true)
-                } else {
-                    ifAuthorisationDenied()
-                }
-            }
-        }
-    }
+//    private func saveModel() {
+//
+//        notificationLogic()
+//
+//        taskModel.title = taskTextField.text!
+//        taskModel.taskDate = datePicker.date
+//        taskModel.priority = Int(segmentedControl.selectedSegmentIndex)
+//
+//        if selectedIndex != nil {
+//            try! localRealm.write {
+//                selectedIndex?.title = taskTextField.text!
+//                selectedIndex?.taskDate = datePicker.date
+//                selectedIndex?.priority = Int(segmentedControl.selectedSegmentIndex)
+//            }
+//        } else {
+//
+//            RealmManager.saveTaskModel(model: taskModel)
+//        }
+//    }
+//
+//    @IBAction func saveButtonTapped(_ sender: Any) {
+//
+//        notificationCenter.getNotificationSettings { [self] (settings) in
+//            DispatchQueue.main.async {
+//                if settings.authorizationStatus == .authorized {
+//                    if let text = taskTextField.text, !text.isEmpty {
+//                        saveModel()
+//                    } else {
+//                        isTextFieldIsEmpty()
+//                    }
+//                    navigationController?.popViewController(animated: true)
+//                } else {
+//                    ifAuthorisationDenied()
+//                }
+//            }
+//        }
+//    }
     //когда открываем окно для редактирования
     func setupEditScreen() {
         if selectedIndex != nil {
