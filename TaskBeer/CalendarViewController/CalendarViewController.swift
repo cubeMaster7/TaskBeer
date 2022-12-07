@@ -113,7 +113,7 @@ class CalendarViewController: UIViewController {
     }
     
     @IBAction func unwindSaveAction(_ segue: UIStoryboardSegue) {
-        guard let newEvent = segue.source as? SelfViewController else {return} //до этого было вот это NewEventTableViewController
+        guard let newEvent = segue.source as? SelfViewController else {return} //до этого было вот это SelfViewController
         newEvent.saveEvent()
         tableView.reloadData()
     }
@@ -183,7 +183,7 @@ extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource {
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
        //здесь должна быть логика что если у нас есть событие на дату, то поставить точку
     
-        return 1
+        return 0
     }
     
   

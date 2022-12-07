@@ -1,19 +1,19 @@
 //
-//  SelfViewController.swift
+//  AddEventTableViewController.swift
 //  TaskBeer
 //
-//  Created by Paul James on 04.12.2022.
+//  Created by Paul James on 07.12.2022.
 //
 
 import UIKit
 
-class SelfViewController: UIViewController {
-    
+class AddEventTableViewController: UITableViewController {
+
     @IBOutlet weak var beerImage: UIImageView!
     @IBOutlet weak var whatDrinkTF: UITextField!
     @IBOutlet weak var amountOfAlcoholTF: UITextField!
     @IBOutlet weak var whereDrinkTF: UITextField!
-    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var datePicker: UIDatePicker!
 
     var imageIsChanged = false
@@ -149,7 +149,7 @@ class SelfViewController: UIViewController {
 }
 
 //MARK: - TextField delegate
-extension SelfViewController: UITextFieldDelegate {
+extension AddEventTableViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -179,7 +179,7 @@ extension SelfViewController: UITextFieldDelegate {
 
 //MARK: - Work with image
 
-extension SelfViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension AddEventTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     //он определяет типа выбора изображения: галерея или камера
     func chooseImagePicker(source: UIImagePickerController.SourceType) {
         
@@ -203,3 +203,4 @@ extension SelfViewController: UIImagePickerControllerDelegate, UINavigationContr
         dismiss(animated: true, completion: nil)
     }
 }
+

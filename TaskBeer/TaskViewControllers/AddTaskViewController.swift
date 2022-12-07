@@ -57,7 +57,7 @@ class AddTaskViewController: UIViewController {
 
         taskTextField.becomeFirstResponder()
         taskTextField.clearButtonMode = .whileEditing
-        taskTextField.leftView = UIView(frame:CGRect(x: 0, y: 0, width: 15, height: taskTextField.frame.height))
+        taskTextField.leftView = UIView(frame:CGRect(x: 0, y: 0, width: 8, height: taskTextField.frame.height))
         taskTextField.leftViewMode = .always
         taskTextField.returnKeyType = .done
         taskTextField.delegate = self
@@ -200,6 +200,7 @@ extension AddTaskViewController: UITextFieldDelegate {
     //когда нажимамем на done клава скрывается
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        return true
     }
     
     //закрытие клавы по тапу на экран

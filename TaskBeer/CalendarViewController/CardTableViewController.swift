@@ -61,11 +61,21 @@ class CardTableViewController: UITableViewController {
     }
     
     @IBAction func editButton(_ sender: Any) {
+
+
         if let vc = storyboard?.instantiateViewController(withIdentifier: "editID") as? SelfViewController {
             vc.currentEvent = editIndex
             present(vc, animated: true, completion: nil)
         }
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//       if segue.identifier == "editSegue" {
+//           let vc = segue.destination as? AddEventTableViewController
+//           vc?.currentEvent = selectedIndex
+//       }
+//   }
+    
     
     @IBAction func shareButtonTapped(_ sender: Any) {
         
