@@ -519,7 +519,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlB-2t-rvU">
-                                <rect key="frame" x="357.5" y="45" width="51.5" height="38"/>
+                                <rect key="frame" x="357.5" y="44" width="51.5" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20" scale="large" weight="semibold"/>
@@ -543,7 +543,7 @@
                             <constraint firstItem="FnH-OE-tEF" firstAttribute="trailing" secondItem="QZU-ve-81p" secondAttribute="trailing" id="BKu-IU-qZL"/>
                             <constraint firstItem="QZU-ve-81p" firstAttribute="trailing" secondItem="UlB-2t-rvU" secondAttribute="trailing" constant="5" id="IAS-0o-sth"/>
                             <constraint firstItem="FnH-OE-tEF" firstAttribute="top" secondItem="tps-3l-hQL" secondAttribute="bottom" constant="8" symbolic="YES" id="Q0e-ej-eDo"/>
-                            <constraint firstItem="UlB-2t-rvU" firstAttribute="top" secondItem="hrT-e1-fi3" secondAttribute="top" constant="45" id="cEa-5F-zMc"/>
+                            <constraint firstItem="UlB-2t-rvU" firstAttribute="top" secondItem="QZU-ve-81p" secondAttribute="top" id="cEa-5F-zMc"/>
                             <constraint firstItem="UbH-hg-xUz" firstAttribute="centerX" secondItem="hrT-e1-fi3" secondAttribute="centerX" id="d6r-KW-hSp"/>
                             <constraint firstItem="tps-3l-hQL" firstAttribute="trailing" secondItem="QZU-ve-81p" secondAttribute="trailing" id="ehh-Bq-5CL"/>
                             <constraint firstItem="FnH-OE-tEF" firstAttribute="bottom" secondItem="QZU-ve-81p" secondAttribute="bottom" id="jco-hW-7fK"/>

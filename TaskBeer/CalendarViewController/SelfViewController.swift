@@ -39,16 +39,16 @@ class SelfViewController: UIViewController {
     
     @IBAction func chooseImage(_ sender: Any) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let camera = UIAlertAction(title: "Camera", style: .default) { _ in
+        let camera = UIAlertAction(title: "Камера", style: .default) { _ in
             self.chooseImagePicker(source: .camera)
         }
         
         
-        let photo = UIAlertAction(title: "Photo", style: .default) { _ in
+        let photo = UIAlertAction(title: "Фотогалерея", style: .default) { _ in
             self.chooseImagePicker(source: .photoLibrary)
         }
         
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancel = UIAlertAction(title: "Закрыть", style: .cancel, handler: nil)
         actionSheet.addAction(camera)
         actionSheet.addAction(photo)
         actionSheet.addAction(cancel)

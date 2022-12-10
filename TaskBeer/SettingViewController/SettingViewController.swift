@@ -101,7 +101,6 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                }
                
         case [0,2]:
-            print("third pressed")
             //поделиться приложением
 //            let url = URL(string: "https://apps.apple.com/us/app/id1535629801")!
 //            let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
@@ -139,7 +138,7 @@ extension SettingViewController: MFMailComposeViewControllerDelegate {
         mailComposerVC.mailComposeDelegate = self
         mailComposerVC.setToRecipients(["luckypaulj@icloud.com"])
         mailComposerVC.setSubject("Вопрос по приложению BeerTask")
-        mailComposerVC.setMessageBody("Как дела?", isHTML: false)
+        mailComposerVC.setMessageBody("Привет. Как дела?", isHTML: false)
         
         return mailComposerVC
     }
