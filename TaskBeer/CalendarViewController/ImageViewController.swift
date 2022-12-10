@@ -41,6 +41,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         return button
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,7 +54,8 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
 
     func setupView() {
         view.backgroundColor = .black
-        view.alpha = 0.5
+        view.alpha = 1
+        
         scrollView.delegate = self
         
         view.addSubview(scrollView)
@@ -64,7 +66,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     func setupConstraint(){
         scrollView.frame = view.bounds
         imageView.frame = scrollView.bounds
-        closeButton.frame = CGRect(x: 20, y: 20, width: 25, height: 25)
+        closeButton.frame = CGRect(x: view.frame.size.width - 40, y: 20, width: 25, height: 25)
     }
     
     func loadImage() {
