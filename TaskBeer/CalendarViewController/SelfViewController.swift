@@ -15,11 +15,11 @@ class SelfViewController: UIViewController {
     @IBOutlet weak var whereDrinkTF: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
-
+    
     var imageIsChanged = false
     var currentEvent: CalendarModel?
     let calendarModel = CalendarModel()
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,45 +30,34 @@ class SelfViewController: UIViewController {
         textFieldSetup()
         //editingChanged означает что работает селектор при редактировании
         setupEdtiScreen()
-
-    }
-    
-    private func textFieldSetup(){
-//        whatDrinkTF.becomeFirstResponder()
-        whatDrinkTF.clearButtonMode = .whileEditing
-        whatDrinkTF.returnKeyType = .done
-        amountOfAlcoholTF.returnKeyType = .done
-        whereDrinkTF.returnKeyType = .done
-        whatDrinkTF.delegate = self
-        amountOfAlcoholTF.delegate = self
-        whereDrinkTF.delegate = self
         
-        tapCloseKeyboard()
+        keyboardApearChanges() //логика поднятия и исчезновения клавиатуры
+        
+        
     }
-    
-    
+
     
     @IBAction func chooseImage(_ sender: Any) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let camera = UIAlertAction(title: "Camera", style: .default) { _ in
             self.chooseImagePicker(source: .camera)
         }
-
-
+        
+        
         let photo = UIAlertAction(title: "Photo", style: .default) { _ in
             self.chooseImagePicker(source: .photoLibrary)
         }
-
+        
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         actionSheet.addAction(camera)
         actionSheet.addAction(photo)
         actionSheet.addAction(cancel)
         present(actionSheet, animated: true, completion: nil)
-
+        
     }
     
     func saveEvent() {
-    
+        
         var image: UIImage?
         
         if imageIsChanged { //если изображение изменено, то ставим измененное иначе по дефолту
@@ -79,7 +68,7 @@ class SelfViewController: UIViewController {
         
         let imageData = image?.pngData()
         
-//        let newEvent = CalendarModel(whatDrink: whatDrinkTF.text!, amountOfAlcohol: amountOfAlcoholTF.text, whereDrink: whereDrinkTF.text, calendarDate: datePicker.date, imageData: imageData)
+        //        let newEvent = CalendarModel(whatDrink: whatDrinkTF.text!, amountOfAlcohol: amountOfAlcoholTF.text, whereDrink: whereDrinkTF.text, calendarDate: datePicker.date, imageData: imageData)
         calendarModel.whatDrink = whatDrinkTF.text!
         if var text = amountOfAlcoholTF.text, text.isEmpty {
             text = "Море алкоголя"
@@ -137,9 +126,9 @@ class SelfViewController: UIViewController {
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         }
         
-//        //уберем кнопку cancel
-//        navigationItem.leftBarButtonItem = nil
-//        title = currentEvent?.whereDrink
+        //        //уберем кнопку cancel
+        //        navigationItem.leftBarButtonItem = nil
+        //        title = currentEvent?.whereDrink
         saveButton.isEnabled = true
     }
     
@@ -150,6 +139,19 @@ class SelfViewController: UIViewController {
 
 //MARK: - TextField delegate
 extension SelfViewController: UITextFieldDelegate {
+    
+    private func textFieldSetup(){
+        //        whatDrinkTF.becomeFirstResponder()
+        whatDrinkTF.clearButtonMode = .whileEditing
+        whatDrinkTF.returnKeyType = .done
+        amountOfAlcoholTF.returnKeyType = .done
+        whereDrinkTF.returnKeyType = .done
+        whatDrinkTF.delegate = self
+        amountOfAlcoholTF.delegate = self
+        whereDrinkTF.delegate = self
+        
+        tapCloseKeyboard()
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -189,7 +191,7 @@ extension SelfViewController: UIImagePickerControllerDelegate, UINavigationContr
             imagePicker.allowsEditing = true
             imagePicker.sourceType = source
             present(imagePicker, animated: true, completion: nil)
- 
+            
         }
     }
     
@@ -201,5 +203,40 @@ extension SelfViewController: UIImagePickerControllerDelegate, UINavigationContr
         imageIsChanged = true
         
         dismiss(animated: true, completion: nil)
+    }
+}
+
+
+//MARK: - Поднятие клавиатуры
+extension SelfViewController {
+    
+    private func keyboardApearChanges() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillHide() {
+        self.view.frame.origin.y = 0
+    }
+    
+    @objc func keyboardWillChange(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if whereDrinkTF.isFirstResponder {
+                self.view.frame.origin.y = -120
+            }
+            
+            if amountOfAlcoholTF.isFirstResponder {
+                self.view.frame.origin.y = -35
+            }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }

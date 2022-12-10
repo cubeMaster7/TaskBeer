@@ -10,9 +10,9 @@ import RealmSwift
 
 class CardTableViewController: UITableViewController {
 
-    @IBOutlet weak var whatDrinkTF: UITextField!
-    @IBOutlet weak var whereDrinkTF: UITextField!
-    @IBOutlet weak var howMuchDrinkTF: UITextField!
+//    @IBOutlet weak var whatDrinkTF: UITextField!
+//    @IBOutlet weak var whereDrinkTF: UITextField!
+//    @IBOutlet weak var howMuchDrinkTF: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var whatDrinkLabel: UILabel!
     @IBOutlet weak var whereDrinkLabel: UILabel!
@@ -60,6 +60,24 @@ class CardTableViewController: UITableViewController {
         ])
     }
     
+    @IBAction func imageButtonPressed(_ sender: Any) {
+        
+        let vc = ImageViewController()
+//        vc.selectedIndex = indexPath.row
+        vc.imageCard = selectedIndex
+//        pushView(viewController: vc)
+        present(vc, animated: true, completion: nil)
+    }
+    
+    func pushView(viewController: UIViewController){
+        let transistion = CATransition()
+        transistion.duration = 0.3
+        transistion.type = .fade
+        self.view.window?.layer.add(transistion, forKey: kCATransition)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    
     @IBAction func editButton(_ sender: Any) {
 
 
@@ -78,7 +96,16 @@ class CardTableViewController: UITableViewController {
     
     
     @IBAction func shareButtonTapped(_ sender: Any) {
-        
+        if let name = URL(string: "https://itunes.apple.com/us/app/myapp/idxxxxxxxx?ls=1&mt=8"), !name.absoluteString.isEmpty {
+          let objectsToShare = [name]
+          let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+          self.present(activityVC, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "У нас проблема", message: "Вы попытались поделиться приложением, но что-то пошло не так", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {

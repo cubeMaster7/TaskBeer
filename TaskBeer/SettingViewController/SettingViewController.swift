@@ -112,7 +112,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
               let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
               self.present(activityVC, animated: true, completion: nil)
             } else {
-                let alert = UIAlertController(title: "Приплыли...", message: "Вы попытались поделиться приложением, но что-то пошло не так", preferredStyle: .alert)
+                let alert = UIAlertController(title: "У нас проблема", message: "Вы попытались поделиться приложением, но что-то пошло не так", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
                 alert.addAction(okAction)
                 present(alert, animated: true, completion: nil)

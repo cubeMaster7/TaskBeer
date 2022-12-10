@@ -1008,15 +1008,27 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fG-Kh-bJX">
                                                     <rect key="frame" x="20" y="46.5" width="374" height="203.5"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNk-Bm-NMj">
+                                                    <rect key="frame" x="20" y="46" width="374" height="204"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                    <connections>
+                                                        <action selector="imageButtonPressed:" destination="Imy-k6-XeR" eventType="touchUpInside" id="RTP-0r-eXE"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="9fG-Kh-bJX" firstAttribute="leading" secondItem="ZFV-Ge-j5Y" secondAttribute="leading" constant="20" id="3sa-rD-Oaw"/>
+                                                <constraint firstItem="BNk-Bm-NMj" firstAttribute="leading" secondItem="ZFV-Ge-j5Y" secondAttribute="leading" constant="20" symbolic="YES" id="BtU-6C-TW9"/>
+                                                <constraint firstItem="BNk-Bm-NMj" firstAttribute="top" secondItem="KOM-Db-ezf" secondAttribute="bottom" constant="7.5" id="CLU-Vr-sUs"/>
+                                                <constraint firstAttribute="bottom" secondItem="BNk-Bm-NMj" secondAttribute="bottom" id="Inw-OO-Bqb"/>
                                                 <constraint firstItem="9fG-Kh-bJX" firstAttribute="top" secondItem="KOM-Db-ezf" secondAttribute="bottom" constant="8" symbolic="YES" id="Mkr-xR-T23"/>
                                                 <constraint firstItem="KOM-Db-ezf" firstAttribute="top" secondItem="ZFV-Ge-j5Y" secondAttribute="topMargin" id="QgH-kN-diF"/>
                                                 <constraint firstAttribute="bottom" secondItem="9fG-Kh-bJX" secondAttribute="bottom" id="UhB-u2-eB7"/>
                                                 <constraint firstItem="KOM-Db-ezf" firstAttribute="leading" secondItem="ZFV-Ge-j5Y" secondAttribute="leadingMargin" id="brY-a3-AhW"/>
                                                 <constraint firstAttribute="trailing" secondItem="9fG-Kh-bJX" secondAttribute="trailing" constant="20" id="esR-Vp-JjJ"/>
                                                 <constraint firstItem="KOM-Db-ezf" firstAttribute="leading" secondItem="ZFV-Ge-j5Y" secondAttribute="leadingMargin" id="jbT-gK-0JM"/>
+                                                <constraint firstAttribute="trailing" secondItem="BNk-Bm-NMj" secondAttribute="trailing" constant="20" symbolic="YES" id="mbP-2x-qXH"/>
                                                 <constraint firstItem="KOM-Db-ezf" firstAttribute="top" secondItem="ZFV-Ge-j5Y" secondAttribute="topMargin" id="op7-R3-XNm"/>
                                             </constraints>
                                         </tableViewCellContentView>
