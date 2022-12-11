@@ -32,6 +32,8 @@ class SettingViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var lightBeerImageView: UIImageView!
+    @IBOutlet weak var darkBeerImageView: UIImageView!
     
     var trigger: Bool?
     let appID = "1287000522"
@@ -43,6 +45,18 @@ class SettingViewController: UIViewController {
 
         setupChangeColor()
         setupTableView()
+        setupBeerImageView()
+    }
+    
+    private func setupBeerImageView() {
+        lightBeerImageView.image = UIImage(named: "lightBeer")
+        lightBeerImageView.layer.cornerRadius = 20
+        lightBeerImageView.clipsToBounds = true
+        
+        darkBeerImageView.image = UIImage(named: "barkBeer")
+        darkBeerImageView.layer.cornerRadius = 20
+        darkBeerImageView.clipsToBounds = true
+        
     }
     
 // настройка смены со светлой на темную тему

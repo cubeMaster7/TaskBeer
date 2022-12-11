@@ -58,20 +58,21 @@ class MainViewController: UIViewController {
     let beerAlert = BeerAlert()
     
     //Realm
-//    let localRealm = try! Realm()
     var taskArray: Results<TaskModel>!
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        tableView.reloadData()
         hasAnyTask()
+        setCountRows()
+        tableView.reloadData()
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         taskArray = realm.objects(TaskModel.self)
         
@@ -81,6 +82,12 @@ class MainViewController: UIViewController {
         
         setupView()
         
+    }
+    
+    //подсчет сколько задач в блоке
+    private func setCountRows() {
+        let taskCount = taskArray.count
+        navigationItem.title = "Пивные задачи (\(taskCount))"
     }
     
     private func setupView() {
@@ -172,6 +179,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 //            RealmManager.shared.deleteTaskModel(model: deleteRow)
             RealmManager.deleteTaskModel(model: deleteRow)
             self.hasAnyTask()
+            self.setCountRows()
             tableView.reloadData()
         }
         
