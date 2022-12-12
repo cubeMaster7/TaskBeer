@@ -13,12 +13,14 @@ enum Theme: Int {
     case device
     case light
     case dark
+
     
     func getUserInterfaceStyle() -> UIUserInterfaceStyle {
         
         //тут какой-то сбой и из-за этого приходится менять значение кейсов местами. Думаю связано с тем что у нас стоит кейс девайс, но когда убираю, все опять слетает. Потом починю на рефакторинге
         switch self {
         case .light:
+            
             return .dark
         case .dark:
             return .light
@@ -37,6 +39,7 @@ class SettingViewController: UIViewController {
     
     var trigger: Bool?
     let appID = "1287000522"
+    var themeIsChanged = false
     
     let helpThemeArray = ["Написать разработчику", "Поставить оценку", "Поделиться приложением", "Скинуть разработчику на пиво"]
     

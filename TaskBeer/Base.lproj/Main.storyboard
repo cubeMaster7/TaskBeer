@@ -79,6 +79,7 @@
                     <navigationItem key="navigationItem" title="Пивные задачи" id="aVE-J4-rLC">
                         <barButtonItem key="backBarButtonItem" title="К пивным задачам" id="h2R-QZ-28N"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="u6T-Q8-2In">
+                            <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="BJ5-G5-xaD" kind="show" id="CSx-00-sbY"/>
                             </connections>
@@ -142,7 +143,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбери пиво" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks2-Ox-b73">
                                 <rect key="frame" x="125" y="69" width="164" height="35"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightBeer" translatesAutoresizingMaskIntoConstraints="NO" id="hDi-yz-mnN">
@@ -295,11 +296,11 @@
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yZX-Vs-RKS">
                                 <rect key="frame" x="154" y="304" width="240" height="32"/>
-                                <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Не важно"/>
                                     <segment title="Важно"/>
                                 </segments>
+                                <color key="selectedSegmentTintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWn-yX-BqO">
                                 <rect key="frame" x="131" y="375" width="152" height="130"/>
@@ -416,17 +417,11 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
                                         <integer key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-OE-tEF">
                                 <rect key="frame" x="0.0" y="401" width="414" height="412"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="80" id="Iex-KB-r6G" customClass="EventTableViewCell" customModule="TaskBeer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
@@ -510,6 +505,7 @@
                                                 <constraint firstItem="uW3-8J-MkA" firstAttribute="centerY" secondItem="93r-3l-PDe" secondAttribute="centerY" id="tdx-lN-fcL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <connections>
                                             <outlet property="amountOfAlcoholLabel" destination="u2X-82-3rc" id="4gr-Q5-J5c"/>
                                             <outlet property="eventImageView" destination="uW3-8J-MkA" id="CCa-mL-Qzb"/>
@@ -522,6 +518,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlB-2t-rvU">
                                 <rect key="frame" x="357.5" y="44" width="51.5" height="38"/>
+                                <color key="tintColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20" scale="large" weight="semibold"/>
@@ -533,12 +530,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Алкокалендарь" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbH-hg-xUz">
                                 <rect key="frame" x="130.5" y="44" width="153.5" height="27.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QZU-ve-81p"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="tps-3l-hQL" firstAttribute="leading" secondItem="QZU-ve-81p" secondAttribute="leading" id="2Ls-Gd-XyE"/>
                             <constraint firstItem="FnH-OE-tEF" firstAttribute="leading" secondItem="QZU-ve-81p" secondAttribute="leading" id="7Zf-Ij-Jjp"/>
@@ -662,7 +659,7 @@
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cEg-OM-RO0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="bkm-RE-SSm" firstAttribute="top" secondItem="6yV-hR-i6i" secondAttribute="bottom" constant="40" id="0v1-nW-xzE"/>
                             <constraint firstItem="cEg-OM-RO0" firstAttribute="trailing" secondItem="ehZ-Vi-G4Q" secondAttribute="trailing" constant="20" id="3iF-LC-hXj"/>
@@ -901,7 +898,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="uCP-8g-bzs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <color key="separatorColor" red="0.99215686270000003" green="0.6705882353" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                         <sections>
@@ -935,6 +932,7 @@
                                                 <constraint firstItem="KlO-3L-8y2" firstAttribute="leading" secondItem="CUl-8j-nO2" secondAttribute="leading" constant="20" symbolic="YES" id="jyE-ju-ZMF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="0rs-n5-wLQ">
                                         <rect key="frame" x="0.0" y="104.5" width="414" height="60"/>
@@ -964,6 +962,7 @@
                                                 <constraint firstItem="JKc-Ls-bIu" firstAttribute="top" secondItem="AgS-XH-Lq3" secondAttribute="bottom" constant="2" id="gkL-nB-hRc"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="vEL-XH-2uG">
                                         <rect key="frame" x="0.0" y="164.5" width="414" height="60"/>
@@ -993,6 +992,7 @@
                                                 <constraint firstItem="HTK-IK-mhG" firstAttribute="leading" secondItem="pt6-r7-8M4" secondAttribute="leadingMargin" id="w6f-pa-SQW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="250" id="dSw-1c-T0A">
                                         <rect key="frame" x="0.0" y="224.5" width="414" height="250"/>
@@ -1034,6 +1034,7 @@
                                                 <constraint firstItem="KOM-Db-ezf" firstAttribute="top" secondItem="ZFV-Ge-j5Y" secondAttribute="topMargin" id="op7-R3-XNm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="bXO-mV-XEh">
                                         <rect key="frame" x="0.0" y="474.5" width="414" height="80"/>
@@ -1062,6 +1063,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="nyg-ym-Oo4" secondAttribute="bottom" constant="2" id="bFZ-vw-hXr"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="55" id="TNU-le-Rt6">
                                         <rect key="frame" x="0.0" y="554.5" width="414" height="55"/>
@@ -1090,6 +1092,7 @@
                                                 <constraint firstItem="PDD-GL-gwQ" firstAttribute="centerX" secondItem="xSV-do-HqJ" secondAttribute="centerX" id="dsd-T6-VrT"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="55" id="lHw-U7-6gZ">
                                         <rect key="frame" x="0.0" y="609.5" width="414" height="55"/>
@@ -1117,6 +1120,7 @@
                                                 <constraint firstItem="uXA-cu-tT9" firstAttribute="centerX" secondItem="nWf-Vv-PXg" secondAttribute="centerX" id="oUQ-kU-vXG"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

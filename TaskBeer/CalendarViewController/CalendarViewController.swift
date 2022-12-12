@@ -45,32 +45,45 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        calendarView.delegate = self
-        calendarView.dataSource = self
-        calendarView.locale = Locale(identifier: "RU_ru")
-        calendarView.appearance.caseOptions = .headerUsesCapitalized //месяц будет с большой буквы
-        calendarView.appearance.borderDefaultColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
-
-        
-        calendarView.calendarHeaderView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
-        calendarView.calendarWeekdayView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
-//        calendarView.select(Date())//делает выделенным текущий день. Но не активирует его
-        
-
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorColor = UIColor(named: "calendarDatesColor")
         
         setupView()
+        calendarSetup()
         eventOnDay(date: Date())
-       
+        setContraints()
     }
+
     
     private func setupView() {
         view.addSubview(noEventImageView)
         view.addSubview(noEventLabel)
-        setContraints()
+        
+    }
+    
+    private func calendarSetup() {
+        calendarView.delegate = self
+        calendarView.dataSource = self
+        calendarView.locale = Locale(identifier: "RU_ru")
+        calendarView.appearance.caseOptions = .headerUsesCapitalized //месяц будет с большой буквы
+//        calendarView.calendarHeaderView.backgroundColor = UIColor(named: "calendarViewColor")
+//        calendarView.calendarWeekdayView.backgroundColor = UIColor(named: "calendarViewColor")
+        
+        calendarView.appearance.weekdayTextColor = UIColor(named: "calendarTitlesColor") // дни недели
+        calendarView.appearance.headerTitleColor = UIColor(named: "calendarTitlesColor") // название месяцев
+        calendarView.appearance.titleDefaultColor = UIColor(named: "calendarDatesColor") //даты
+        calendarView.appearance.borderDefaultColor = UIColor(named: "calendarBorderColor")
+        calendarView.appearance.selectionColor = #colorLiteral(red: 1, green: 0.6497964263, blue: 0, alpha: 1)
+        
+//        calendarView.backgroundColor = UIColor(named: "calendarViewColor")
+//        calendarView.appearance.borderDefaultColor = UIColor(named: "otherColor")
+
+        
+//        calendarView.calendarHeaderView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
+//        calendarView.calendarWeekdayView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
+//        calendarView.select(Date())//делает выделенным текущий день. Но не активирует его
         
     }
     

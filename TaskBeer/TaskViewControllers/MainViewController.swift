@@ -36,7 +36,7 @@ class MainViewController: UIViewController {
         let button = UIButton(type: .system)
         button.layer.cornerRadius = 10
         button.backgroundColor = #colorLiteral(red: 1, green: 0.3943974972, blue: 0.4663012028, alpha: 1)
-        button.setTitle("  К задаче ", for: .normal)
+        button.setTitle(" К задаче ", for: .normal)
         button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(goToAddTaskVC), for: .touchUpInside)

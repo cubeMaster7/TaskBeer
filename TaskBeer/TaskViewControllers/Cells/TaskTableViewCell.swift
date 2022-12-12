@@ -26,6 +26,7 @@ class TaskTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         setConstraints()
         readyButton.addTarget(self, action: #selector(secondReadyButtonTapped), for: .touchUpInside)
     }
