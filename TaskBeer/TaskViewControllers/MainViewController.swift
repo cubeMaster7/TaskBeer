@@ -54,12 +54,28 @@ class MainViewController: UIViewController {
         return button
     }()
     
+    //кнопка на основном вью для добавления задач
+    private let addButtonVK: UIButton = {
+        let button = UIButton(type: .custom)
+        button.layer.cornerRadius = 15
+        button.backgroundColor = #colorLiteral(red: 1, green: 0.5843137255, blue: 0, alpha: 1)
+        button.setImage(UIImage(named: "plus"), for: .normal)
+        button.clipsToBounds = true
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(addButtonVKTapped), for: .touchUpInside)
+        return button
+    }()
+    
     private var buttonStackView = UIStackView()
     let beerAlert = BeerAlert()
     
     //Realm
     var taskArray: Results<TaskModel>!
     
+    //ориентация
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -72,8 +88,10 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 0.5843137255, blue: 0, alpha: 1) //меняет цвет кнопки возврата в навигейшен
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil) //убирает надпись back в навигейшенконтроллере
+
+
         taskArray = realm.objects(TaskModel.self)
         
         tableView.delegate = self
@@ -95,6 +113,7 @@ class MainViewController: UIViewController {
         view.addSubview(imageView)
         buttonStackView = UIStackView(arrangedSubviews: [addTaskButton, beerButton], axis: .horizontal, spacing: 20)
         view.addSubview(buttonStackView)
+        view.addSubview(addButtonVK)
         
         setContraints()
         
@@ -130,6 +149,16 @@ class MainViewController: UIViewController {
     
     @objc private func beerButtonTapped() {
             self.beerAlert.alertCustom(viewController: self)
+    }
+    
+    
+    //кнопка добавления задачи на основном вью которая будет всегоа
+    @objc func addButtonVKTapped() {
+        if let addTackVC = storyboard?.instantiateViewController(withIdentifier: "addTackVC") as? AddTaskViewController {
+            addTackVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(addTackVC, animated: true) //если использовать такой переход, то у нас не пропадет возможность вернуться назад у навигейшенБара. Если использовать present, то будет просто переход и возможность вернуться обратно не будет
+        }
+        
     }
     
     
@@ -213,6 +242,13 @@ extension MainViewController {
         ])
         NSLayoutConstraint.activate([
             beerButton.widthAnchor.constraint(equalToConstant: 100)
+        ])
+        
+        NSLayoutConstraint.activate([
+            addButtonVK.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
+            addButtonVK.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -85),
+            addButtonVK.widthAnchor.constraint(equalToConstant: 50),
+            addButtonVK.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 }

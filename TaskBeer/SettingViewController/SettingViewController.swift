@@ -13,7 +13,7 @@ enum Theme: Int {
     case device
     case light
     case dark
-
+    
     
     func getUserInterfaceStyle() -> UIUserInterfaceStyle {
         
@@ -23,6 +23,7 @@ enum Theme: Int {
             
             return .dark
         case .dark:
+            
             return .light
         default:
             return .light
@@ -31,27 +32,30 @@ enum Theme: Int {
 }
 
 class SettingViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var lightBeerImageView: UIImageView!
     @IBOutlet weak var darkBeerImageView: UIImageView!
     
-    var trigger: Bool?
-    let appID = "1287000522"
-    var themeIsChanged = false
+//    var trigger: Bool?
+//    let appID = "1287000522"
     
-    let helpThemeArray = ["Написать разработчику", "Поставить оценку", "Поделиться приложением", "Скинуть разработчику на пиво"]
+    let helpThemeArray = ["Написать разработчику", "Поставить оценку", "Поделиться приложением", "Скинуть разработчику на пиво", "Сменить язык"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         setupChangeColor()
         setupTableView()
         setupBeerImageView()
     }
     
     private func setupBeerImageView() {
+        
+        
+        
         lightBeerImageView.image = UIImage(named: "lightBeer")
         lightBeerImageView.layer.cornerRadius = 20
         lightBeerImageView.clipsToBounds = true
@@ -59,16 +63,15 @@ class SettingViewController: UIViewController {
         darkBeerImageView.image = UIImage(named: "barkBeer")
         darkBeerImageView.layer.cornerRadius = 20
         darkBeerImageView.clipsToBounds = true
-        
     }
     
-// настройка смены со светлой на темную тему
+    // настройка смены со светлой на темную тему
     private func setupChangeColor() {
         view.backgroundColor = UIColor(named: "backgroundColor")
         segmentedControl.selectedSegmentIndex = MTUserDefaults.shared.theme.rawValue
     }
     
-//смена светлой и темной темы
+    //смена светлой и темной темы
     @IBAction func changeBeerType(_ sender: Any) {
         MTUserDefaults.shared.theme = Theme(rawValue: segmentedControl.selectedSegmentIndex) ?? .device
         view.window?.overrideUserInterfaceStyle = MTUserDefaults.shared.theme.getUserInterfaceStyle()
@@ -110,25 +113,25 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             // поставить оценку приложению
             
             if #available(iOS 14.0, *) {
-                   if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
-                       SKStoreReviewController.requestReview(in: scene)
-                   }
-               } else if #available(iOS 10.3, *) {
-                   SKStoreReviewController.requestReview()
-               }
-               
+                if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                    SKStoreReviewController.requestReview(in: scene)
+                }
+            } else if #available(iOS 10.3, *) {
+                SKStoreReviewController.requestReview()
+            }
+            
         case [0,2]:
             //поделиться приложением
-//            let url = URL(string: "https://apps.apple.com/us/app/id1535629801")!
-//            let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-//            present(vc, animated: true)
+            //            let url = URL(string: "https://apps.apple.com/us/app/id1535629801")!
+            //            let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+            //            present(vc, animated: true)
             
             if let name = URL(string: "https://itunes.apple.com/us/app/myapp/idxxxxxxxx?ls=1&mt=8"), !name.absoluteString.isEmpty {
-              let objectsToShare = [name]
-              let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-              self.present(activityVC, animated: true, completion: nil)
+                let objectsToShare = [name]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                self.present(activityVC, animated: true, completion: nil)
             } else {
-                let alert = UIAlertController(title: "У нас проблема", message: "Вы попытались поделиться приложением, но что-то пошло не так", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Восстановить", message: "Вы попытались поделиться приложением, но что-то пошло не так", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
                 alert.addAction(okAction)
                 present(alert, animated: true, completion: nil)
@@ -137,6 +140,11 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         case [0,3]:
             let alert = UIAlertController(title: "Копилка в разработке", message: "Спасибо, котятки, но пока что вы можете только написать разработчику", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Плак-плак", style: .default, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        case [0,4]:
+            let alert = UIAlertController(title: "Смена языка в разработке", message: nil, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Хорошо", style: .default, handler: nil)
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)
         default:
@@ -160,10 +168,17 @@ extension SettingViewController: MFMailComposeViewControllerDelegate {
         return mailComposerVC
     }
     
-    // вызовет алерт если у нас не будет отправляться
+    // вызовет алерт если у нас не будет отправляться письмо через почту
     func showMailError() {
-        let sendMailErrorAlert = UIAlertController(title: "Невозможно отправить email", message: "Вы пытались отправить email, но оно не было отправлено", preferredStyle: .alert)
-        let dismiss = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let sendMailErrorAlert = UIAlertController(title: "Восстановить \"Почта\"?", message: "Для отправки сообщения требуется приложение \"Почта\", отсутствующее на вашем iPhone. Вы можете загрузить его из App Store. Если оно у вас есть, включите в настройках iCloud \"Почта iCloud\"", preferredStyle: .alert)
+        let appStoreAction = UIAlertAction(title: "Перейти в App Store", style: .default) { _ in
+          //переход в эпп стор
+            if let url = URL(string: "itms-apps://itunes.apple.com/app/id1108187098") {
+                UIApplication.shared.open(url)
+            }
+        }
+        let dismiss = UIAlertAction(title: "Отменить", style: .default, handler: nil)
+        sendMailErrorAlert.addAction(appStoreAction)
         sendMailErrorAlert.addAction(dismiss)
         self.present(sendMailErrorAlert, animated: true, completion: nil)
     }

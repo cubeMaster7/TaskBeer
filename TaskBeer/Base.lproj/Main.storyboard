@@ -18,7 +18,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lKO-IQ-WZh">
                                 <rect key="frame" x="0.0" y="88" width="414" height="588"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="60" id="bPN-wi-2yO" customClass="TaskTableViewCell" customModule="TaskBeer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
@@ -49,6 +49,7 @@
                                                 <constraint firstItem="Shm-OO-V9p" firstAttribute="leading" secondItem="3Qe-c1-30p" secondAttribute="leading" constant="63" id="mxf-5g-7TK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <connections>
                                             <outlet property="dateAndTimeLabel" destination="7Qd-Fw-hBe" id="s4w-fS-VJv"/>
                                             <outlet property="titleLabel" destination="Shm-OO-V9p" id="tnx-u6-vk1"/>
@@ -65,7 +66,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="6fR-Zc-ISE" firstAttribute="top" secondItem="lKO-IQ-WZh" secondAttribute="bottom" constant="8" symbolic="YES" id="JYb-O2-1hD"/>
                             <constraint firstAttribute="bottom" secondItem="6fR-Zc-ISE" secondAttribute="bottom" constant="-255" id="KVg-CL-KTb"/>
@@ -77,7 +78,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Пивные задачи" id="aVE-J4-rLC">
-                        <barButtonItem key="backBarButtonItem" title="К пивным задачам" id="h2R-QZ-28N"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="u6T-Q8-2In">
                             <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -362,6 +362,7 @@
                                     <action selector="gotovoButtonTapped:" destination="BJ5-G5-xaD" eventType="touchUpInside" id="zec-uy-QUH"/>
                                 </connections>
                             </button>
+                            <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -409,9 +410,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tps-3l-hQL" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="84" width="414" height="309"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="500"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="309" id="REd-Y3-6lh"/>
+                                    <constraint firstAttribute="height" constant="500" id="REd-Y3-6lh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
@@ -420,7 +421,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-OE-tEF">
-                                <rect key="frame" x="0.0" y="401" width="414" height="412"/>
+                                <rect key="frame" x="0.0" y="592" width="414" height="221"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="80" id="Iex-KB-r6G" customClass="EventTableViewCell" customModule="TaskBeer" customModuleProvider="target">
@@ -576,6 +577,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="8Sq-vT-1w2"/>
                                 </constraints>
+                                <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Сохранить">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
@@ -586,6 +588,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0P4-3q-WvO">
                                 <rect key="frame" x="5" y="50" width="92.5" height="37.5"/>
+                                <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Закрыть">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
@@ -1049,6 +1052,7 @@
                                                         <constraint firstAttribute="width" constant="290" id="cia-Cm-iUG"/>
                                                         <constraint firstAttribute="height" constant="50" id="nPk-dX-bSO"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Изменить" titleAlignment="automatic">
                                                         <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
@@ -1078,6 +1082,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="IbV-YK-d4C"/>
                                                         <constraint firstAttribute="width" constant="290" id="Pks-KO-Yxh"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Поделиться">
                                                         <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
@@ -1107,6 +1112,7 @@
                                                         <constraint firstAttribute="width" constant="290" id="j0T-sN-jqG"/>
                                                         <constraint firstAttribute="height" constant="50" id="xZf-ra-fwn"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Вернуться ">
                                                         <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                                     </buttonConfiguration>

@@ -19,8 +19,9 @@ class CalendarViewController: UIViewController {
     
     private let noEventImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "drunkMan2")
+        imageView.image = UIImage(named: "fullBeer")
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -68,17 +69,13 @@ class CalendarViewController: UIViewController {
         calendarView.dataSource = self
         calendarView.locale = Locale(identifier: "RU_ru")
         calendarView.appearance.caseOptions = .headerUsesCapitalized //месяц будет с большой буквы
-//        calendarView.calendarHeaderView.backgroundColor = UIColor(named: "calendarViewColor")
-//        calendarView.calendarWeekdayView.backgroundColor = UIColor(named: "calendarViewColor")
         
         calendarView.appearance.weekdayTextColor = UIColor(named: "calendarTitlesColor") // дни недели
         calendarView.appearance.headerTitleColor = UIColor(named: "calendarTitlesColor") // название месяцев
         calendarView.appearance.titleDefaultColor = UIColor(named: "calendarDatesColor") //даты
         calendarView.appearance.borderDefaultColor = UIColor(named: "calendarBorderColor")
         calendarView.appearance.selectionColor = #colorLiteral(red: 1, green: 0.6497964263, blue: 0, alpha: 1)
-        
-//        calendarView.backgroundColor = UIColor(named: "calendarViewColor")
-//        calendarView.appearance.borderDefaultColor = UIColor(named: "otherColor")
+        calendarView.appearance.borderSelectionColor = .red
 
         
 //        calendarView.calendarHeaderView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
@@ -133,17 +130,18 @@ class CalendarViewController: UIViewController {
     
     private func setContraints() {
         NSLayoutConstraint.activate([
-            noEventImageView.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 30),
-            noEventImageView.widthAnchor.constraint(equalToConstant: 80),
-            noEventImageView.heightAnchor.constraint(equalToConstant: 130),
-            noEventImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-        NSLayoutConstraint.activate([
-            noEventLabel.topAnchor.constraint(equalTo: noEventImageView.bottomAnchor, constant: 20),
+            noEventLabel.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 20),
             noEventLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             noEventLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             noEventLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             noEventLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            noEventImageView.topAnchor.constraint(equalTo: noEventLabel.bottomAnchor, constant: 10),
+            noEventImageView.widthAnchor.constraint(equalToConstant: 55),
+            noEventImageView.heightAnchor.constraint(equalToConstant: 60),
+            noEventImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
     
@@ -196,7 +194,7 @@ extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource {
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
        //здесь должна быть логика что если у нас есть событие на дату, то поставить точку
     
-        return 0
+        return 1
     }
     
   
