@@ -59,8 +59,12 @@ class MainViewController: UIViewController {
         let button = UIButton(type: .custom)
         button.layer.cornerRadius = 15
         button.backgroundColor = #colorLiteral(red: 1, green: 0.5843137255, blue: 0, alpha: 1)
-        button.setImage(UIImage(named: "plus"), for: .normal)
+//        button.setImage(UIImage(named: "plus"), for: .normal)
+        button.setTitle("+", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Avenir Next Bold", size: 60)
         button.clipsToBounds = true
+        button.layer.borderWidth = 1
+        button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(addButtonVKTapped), for: .touchUpInside)
         return button

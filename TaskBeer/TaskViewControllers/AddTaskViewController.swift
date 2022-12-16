@@ -66,33 +66,35 @@ class AddTaskViewController: UIViewController {
         tapCloseKeyboard()
     }
     
+    private func saveLogic() {
+        if let text = taskTextField.text, !text.isEmpty {
+            notificationLogic()
+    
+            taskModel.title = taskTextField.text!
+            taskModel.taskDate = datePicker.date
+            taskModel.priority = Int(segmentedControl.selectedSegmentIndex)
+    
+            if selectedIndex != nil {
+                try! localRealm.write {
+                    selectedIndex?.title = taskTextField.text!
+                    selectedIndex?.taskDate = datePicker.date
+                    selectedIndex?.priority = Int(segmentedControl.selectedSegmentIndex)
+                }
+            } else {
+    
+                RealmManager.saveTaskModel(model: taskModel)
+            }
+        } else {
+            isTextFieldIsEmpty()
+        }
+    }
  
-    func saveButtonTapped() {
+     func saveButtonTapped() {
    
            notificationCenter.getNotificationSettings { [self] (settings) in
                DispatchQueue.main.async {
                    if settings.authorizationStatus == .authorized {
-                       if let text = taskTextField.text, !text.isEmpty {
-                           notificationLogic()
-                   
-                           taskModel.title = taskTextField.text!
-                           taskModel.taskDate = datePicker.date
-                           taskModel.priority = Int(segmentedControl.selectedSegmentIndex)
-                   
-                           if selectedIndex != nil {
-                               try! localRealm.write {
-                                   selectedIndex?.title = taskTextField.text!
-                                   selectedIndex?.taskDate = datePicker.date
-                                   selectedIndex?.priority = Int(segmentedControl.selectedSegmentIndex)
-                               }
-                           } else {
-                   
-                               RealmManager.saveTaskModel(model: taskModel)
-                           }
-                       } else {
-                           isTextFieldIsEmpty()
-                       }
-//                       navigationController?.popViewController(animated: true)
+                       saveLogic()
                    } else {
                        ifAuthorisationDenied()
                    }
@@ -100,43 +102,7 @@ class AddTaskViewController: UIViewController {
            }
        }
     
-//    private func saveModel() {
-//
-//        notificationLogic()
-//
-//        taskModel.title = taskTextField.text!
-//        taskModel.taskDate = datePicker.date
-//        taskModel.priority = Int(segmentedControl.selectedSegmentIndex)
-//
-//        if selectedIndex != nil {
-//            try! localRealm.write {
-//                selectedIndex?.title = taskTextField.text!
-//                selectedIndex?.taskDate = datePicker.date
-//                selectedIndex?.priority = Int(segmentedControl.selectedSegmentIndex)
-//            }
-//        } else {
-//
-//            RealmManager.saveTaskModel(model: taskModel)
-//        }
-//    }
-//
-//    @IBAction func saveButtonTapped(_ sender: Any) {
-//
-//        notificationCenter.getNotificationSettings { [self] (settings) in
-//            DispatchQueue.main.async {
-//                if settings.authorizationStatus == .authorized {
-//                    if let text = taskTextField.text, !text.isEmpty {
-//                        saveModel()
-//                    } else {
-//                        isTextFieldIsEmpty()
-//                    }
-//                    navigationController?.popViewController(animated: true)
-//                } else {
-//                    ifAuthorisationDenied()
-//                }
-//            }
-//        }
-//    }
+
     //когда открываем окно для редактирования
     func setupEditScreen() {
         if selectedIndex != nil {

@@ -130,7 +130,7 @@ class CalendarViewController: UIViewController {
     
     private func setContraints() {
         NSLayoutConstraint.activate([
-            noEventLabel.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 5),
+            noEventLabel.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 0),
             noEventLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             noEventLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             noEventLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),

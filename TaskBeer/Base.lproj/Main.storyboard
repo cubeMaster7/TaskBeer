@@ -199,10 +199,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H6B-v7-INp">
-                                <rect key="frame" x="0.0" y="439" width="414" height="220"/>
+                                <rect key="frame" x="0.0" y="439" width="414" height="175"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="JcZ-by-FvG"/>
+                                    <constraint firstAttribute="height" constant="175" id="JcZ-by-FvG"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="swb-9R-v0X" customClass="HelpTableViewCell" customModule="TaskBeer" customModuleProvider="target">
@@ -276,13 +276,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcZ-mJ-zt8">
-                                <rect key="frame" x="29" y="231" width="52" height="31"/>
+                                <rect key="frame" x="20" y="231" width="52" height="31"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="mOp-Pd-F0A">
-                                <rect key="frame" x="177" y="212" width="217" height="77"/>
+                                <rect key="frame" x="168" y="212" width="226" height="77"/>
                                 <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="FXr-qm-etQ"/>
@@ -290,13 +290,13 @@
                                 <locale key="locale" localeIdentifier="ru_RU"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Важность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNB-AA-6vY">
-                                <rect key="frame" x="29" y="302" width="106" height="31"/>
+                                <rect key="frame" x="20" y="302" width="106" height="31"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yZX-Vs-RKS">
-                                <rect key="frame" x="154" y="304" width="240" height="32"/>
+                                <rect key="frame" x="145" y="304" width="249" height="32"/>
                                 <segments>
                                     <segment title="Не важно"/>
                                     <segment title="Важно"/>
@@ -316,7 +316,7 @@
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q2b-an-L54">
-                                <rect key="frame" x="111" y="232" width="51" height="31"/>
+                                <rect key="frame" x="102" y="232" width="51" height="31"/>
                                 <color key="onTintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сохранить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaI-IO-lKs">
@@ -337,7 +337,7 @@
                             <constraint firstItem="W6g-fm-kgc" firstAttribute="trailing" secondItem="v87-PM-ZBT" secondAttribute="trailing" constant="20" id="Enj-he-FY0"/>
                             <constraint firstItem="aWn-yX-BqO" firstAttribute="centerX" secondItem="j1A-eV-Orf" secondAttribute="centerX" id="F9C-ra-bn9"/>
                             <constraint firstItem="W6g-fm-kgc" firstAttribute="trailing" secondItem="mOp-Pd-F0A" secondAttribute="trailing" constant="20" id="GGi-2n-ApG"/>
-                            <constraint firstItem="cNB-AA-6vY" firstAttribute="leading" secondItem="W6g-fm-kgc" secondAttribute="leading" constant="29" id="Nfc-Yo-zL9"/>
+                            <constraint firstItem="cNB-AA-6vY" firstAttribute="leading" secondItem="W6g-fm-kgc" secondAttribute="leading" constant="20" id="Nfc-Yo-zL9"/>
                             <constraint firstItem="mOp-Pd-F0A" firstAttribute="top" secondItem="v87-PM-ZBT" secondAttribute="bottom" constant="18" id="R0X-zQ-ODP"/>
                             <constraint firstItem="yZX-Vs-RKS" firstAttribute="top" secondItem="mOp-Pd-F0A" secondAttribute="bottom" constant="15" id="RKa-9v-NyA"/>
                             <constraint firstItem="v87-PM-ZBT" firstAttribute="leading" secondItem="jKU-Xa-ccg" secondAttribute="trailing" constant="19" id="WIL-t1-Xfe"/>
@@ -349,7 +349,7 @@
                             <constraint firstItem="v87-PM-ZBT" firstAttribute="top" secondItem="W6g-fm-kgc" secondAttribute="top" constant="20" id="ojx-kj-hUA"/>
                             <constraint firstItem="GaI-IO-lKs" firstAttribute="top" secondItem="aWn-yX-BqO" secondAttribute="bottom" constant="8" symbolic="YES" id="rWQ-cw-pnV"/>
                             <constraint firstItem="W6g-fm-kgc" firstAttribute="trailing" secondItem="yZX-Vs-RKS" secondAttribute="trailing" constant="20" id="t1d-Hn-Kvw"/>
-                            <constraint firstItem="pcZ-mJ-zt8" firstAttribute="leading" secondItem="W6g-fm-kgc" secondAttribute="leading" constant="29" id="xxe-jQ-csZ"/>
+                            <constraint firstItem="pcZ-mJ-zt8" firstAttribute="leading" secondItem="W6g-fm-kgc" secondAttribute="leading" constant="20" id="xxe-jQ-csZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Добавить задачу" id="6aB-JV-NmH">
@@ -710,7 +710,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFq-W3-heE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rhu-aE-YTD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1757.9710144927537" y="1380.8035714285713"/>
+            <point key="canvasLocation" x="2439" y="1462"/>
         </scene>
         <!--Add Event Table View Controller-->
         <scene sceneID="Bb3-4K-nq9">
@@ -904,7 +904,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <color key="separatorColor" red="0.99215686270000003" green="0.6705882353" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                        <inset key="separatorInset" minX="60" minY="0.0" maxX="60" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="SuG-3N-dht">
                                 <cells>
