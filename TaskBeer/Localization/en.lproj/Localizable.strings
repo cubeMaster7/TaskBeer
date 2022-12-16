@@ -1,0 +1,201 @@
+/* 
+  Localizable.strings
+  TaskBeer
+
+  Created by Paul James on 15.12.2022.
+  
+*/
+
+
+/* Class = "UIButton"; configuration.title = "Закрыть"; ObjectID = "0P4-3q-WvO"; */
+"0P4-3q-WvO.configuration.title" = "Сlose";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0P4-3q-WvO"; */
+"0P4-3q-WvO.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Сохранить"; ObjectID = "0Rv-5J-6Ib"; */
+"0Rv-5J-6Ib.configuration.title" = "Save";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0Rv-5J-6Ib"; */
+"0Rv-5J-6Ib.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Сколько пили:"; ObjectID = "6US-aT-gZY"; */
+"6US-aT-gZY.text" = "How much drunk:";
+
+/* Class = "UINavigationItem"; title = "Добавить задачу"; ObjectID = "6aB-JV-NmH"; */
+"6aB-JV-NmH.title" = "Add task";
+
+/* Class = "UITextField"; placeholder = "Укажите место, где пили"; ObjectID = "6yV-hR-i6i"; */
+"6yV-hR-i6i.placeholder" = "Where you drunk";
+
+/* Class = "UILabel"; text = "Что вы пили:"; ObjectID = "8QN-Rc-g0n"; */
+"8QN-Rc-g0n.text" = "What you drunk:";
+
+/* Class = "UISegmentedControl"; 8iD-ZB-Ji4.segmentTitles[0] = "Светлое"; ObjectID = "8iD-ZB-Ji4"; */
+"8iD-ZB-Ji4.segmentTitles[0]" = "Light beer";
+
+/* Class = "UISegmentedControl"; 8iD-ZB-Ji4.segmentTitles[1] = "Тёмное"; ObjectID = "8iD-ZB-Ji4"; */
+"8iD-ZB-Ji4.segmentTitles[1]" = "Dark beer";
+
+/* Class = "UILabel"; text = "ЧТО ПИЛИ"; ObjectID = "8zy-ff-U91"; */
+"8zy-ff-U91.text" = "What drink";
+
+/* Class = "UILabel"; text = "Сколько вы выпили:"; ObjectID = "AgS-XH-Lq3"; */
+"AgS-XH-Lq3.text" = "How much drink:";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "BNk-Bm-NMj"; */
+"BNk-Bm-NMj.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Позвать разработчика попить пива"; ObjectID = "FH6-Qd-4X7"; */
+"FH6-Qd-4X7.text" = "Call developer to drink beer";
+
+/* Class = "UILabel"; text = "Сохранить"; ObjectID = "GaI-IO-lKs"; */
+"GaI-IO-lKs.text" = "Save";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "Gy7-oh-PSt"; */
+"Gy7-oh-PSt.title" = "Save";
+
+/* Class = "UILabel"; text = "Где пили лейбл"; ObjectID = "HTK-IK-mhG"; */
+"HTK-IK-mhG.text" = "Where did drink";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IFu-6f-ARE"; */
+"IFu-6f-ARE.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Сколько пили лейбл"; ObjectID = "JKc-Ls-bIu"; */
+"JKc-Ls-bIu.text" = "How much drink";
+
+/* Class = "UILabel"; text = "Фото из заведения:"; ObjectID = "KOM-Db-ezf"; */
+"KOM-Db-ezf.text" = "Photo from place:";
+
+/* Class = "UILabel"; text = "Что пили лейбл"; ObjectID = "KlO-3L-8y2"; */
+"KlO-3L-8y2.text" = "What drink";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "Kms-kR-fzV"; */
+"Kms-kR-fzV.title" = "Cancel";
+
+/* Class = "UITabBarItem"; title = "Настройки"; ObjectID = "NqN-Ro-X0e"; */
+"NqN-Ro-X0e.title" = "Setting";
+
+/* Class = "UIButton"; configuration.title = "Поделиться"; ObjectID = "PDD-GL-gwQ"; */
+"PDD-GL-gwQ.configuration.title" = "Share";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PDD-GL-gwQ"; */
+"PDD-GL-gwQ.normalTitle" = "Button";
+
+/* Class = "UIBarButtonItem"; title = "Готово"; ObjectID = "QLW-u1-QNu"; */
+"QLW-u1-QNu.title" = "Done";
+
+/* Class = "UILabel"; text = "Что пили:"; ObjectID = "T5O-SU-LMX"; */
+"T5O-SU-LMX.text" = "What drink";
+
+/* Class = "UITextField"; placeholder = "Укажите количество выпитого"; ObjectID = "Thg-FB-KxW"; */
+"Thg-FB-KxW.placeholder" = "How much did you drink";
+
+/* Class = "UILabel"; text = "Алкокалендарь"; ObjectID = "UbH-hg-xUz"; */
+"UbH-hg-xUz.text" = "Alcocalendar";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UlB-2t-rvU"; */
+"UlB-2t-rvU.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "ГДЕ"; ObjectID = "WMp-eg-JgU"; */
+"WMp-eg-JgU.text" = "Where";
+
+/* Class = "UILabel"; text = "ДАТА"; ObjectID = "a9I-SL-vZs"; */
+"a9I-SL-vZs.text" = "Date";
+
+/* Class = "UINavigationItem"; title = "Пивные задачи"; ObjectID = "aVE-J4-rLC"; */
+"aVE-J4-rLC.title" = "Beer Task";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "aWn-yX-BqO"; */
+"aWn-yX-BqO.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Где пили:"; ObjectID = "bF8-ZB-XHR"; */
+"bF8-ZB-XHR.text" = "Where drink:";
+
+/* Class = "UILabel"; text = "Когда дело было"; ObjectID = "bkm-RE-SSm"; */
+"bkm-RE-SSm.text" = "When you drink";
+
+/* Class = "UILabel"; text = "Важность"; ObjectID = "cNB-AA-6vY"; */
+"cNB-AA-6vY.text" = "Importance";
+
+/* Class = "UILabel"; text = "Где вы пили: "; ObjectID = "d3j-Ft-9pJ"; */
+"d3j-Ft-9pJ.text" = "Where you drink: ";
+
+/* Class = "UILabel"; text = "Где пили:"; ObjectID = "dxC-rQ-YBM"; */
+"dxC-rQ-YBM.text" = "Where you drink";
+
+/* Class = "UITextField"; placeholder = "Ваш напиток"; ObjectID = "ehZ-Vi-G4Q"; */
+"ehZ-Vi-G4Q.placeholder" = "Your drink";
+
+/* Class = "UILabel"; text = "СКОЛЬКО"; ObjectID = "hbp-4V-h9r"; */
+"hbp-4V-h9r.text" = "How much";
+
+/* Class = "UIButton"; configuration.title = "Готово"; ObjectID = "hyp-Cq-eqm"; */
+"hyp-Cq-eqm.configuration.title" = "Done";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hyp-Cq-eqm"; */
+"hyp-Cq-eqm.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ipy-v8-F0r"; */
+"ipy-v8-F0r.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Задача"; ObjectID = "jKU-Xa-ccg"; */
+"jKU-Xa-ccg.text" = "Task";
+
+/* Class = "UILabel"; text = "Выбери пиво"; ObjectID = "ks2-Ox-b73"; */
+"ks2-Ox-b73.text" = "Choose beer type";
+
+/* Class = "UIButton"; configuration.title = "Изменить"; ObjectID = "nyg-ym-Oo4"; */
+"nyg-ym-Oo4.configuration.title" = "Edit";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "nyg-ym-Oo4"; */
+"nyg-ym-Oo4.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Где пили:"; ObjectID = "pZg-Ge-6Kf"; */
+"pZg-Ge-6Kf.text" = "Where drink:";
+
+/* Class = "UILabel"; text = "Дата"; ObjectID = "pcZ-mJ-zt8"; */
+"pcZ-mJ-zt8.text" = "Date";
+
+/* Class = "UITabBarItem"; title = "Задачи"; ObjectID = "q31-vu-icc"; */
+"q31-vu-icc.title" = "Tasks";
+
+/* Class = "UILabel"; text = "Что пили:"; ObjectID = "sf6-FT-AmY"; */
+"sf6-FT-AmY.text" = "Where drink:";
+
+/* Class = "UILabel"; text = "Сколько выпито:"; ObjectID = "tQT-0C-2rz"; */
+"tQT-0C-2rz.text" = "How much drink:";
+
+/* Class = "UILabel"; text = "Сколько выпито:"; ObjectID = "u2X-82-3rc"; */
+"u2X-82-3rc.text" = "How much drink:";
+
+/* Class = "UIButton"; configuration.title = "Вернуться "; ObjectID = "uXA-cu-tT9"; */
+"uXA-cu-tT9.configuration.title" = "Back ";
+
+/* Class = "UITextField"; placeholder = "Ваша задача"; ObjectID = "v87-PM-ZBT"; */
+"v87-PM-ZBT.placeholder" = "Your task";
+
+/* Class = "UITabBarItem"; title = "Алкокалендарь"; ObjectID = "woQ-Uv-yLc"; */
+"woQ-Uv-yLc.title" = "Alcocalendar";
+
+/* Class = "UISegmentedControl"; yZX-Vs-RKS.segmentTitles[0] = "Не важно"; ObjectID = "yZX-Vs-RKS"; */
+"yZX-Vs-RKS.segmentTitles[0]" = "Not important";
+
+/* Class = "UISegmentedControl"; yZX-Vs-RKS.segmentTitles[1] = "Важно"; ObjectID = "yZX-Vs-RKS"; */
+"yZX-Vs-RKS.segmentTitles[1]" = "Important";
+
+/* Class = "UILabel"; text = "Что пили"; ObjectID = "zYY-2H-0fv"; */
+"zYY-2H-0fv.text" = "What drink";
+
+
+//SetLanguageViewController
+"titleLabelSetLang" = "Choose language";
+
+//CalendarViewController
+"noEventLabel" = "Tap on the date to find out if you drank on that day";
+
+//MainViewController
+"noTaskLabel" = "Add task or drink beer?";
+"addTaskButton" = "Task";
+"beerButton" = "Beer";
+"aVE-J4-rLC.title" = "Beer Tasks";

@@ -130,7 +130,7 @@ class CalendarViewController: UIViewController {
     
     private func setContraints() {
         NSLayoutConstraint.activate([
-            noEventLabel.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 20),
+            noEventLabel.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 5),
             noEventLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             noEventLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             noEventLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -189,12 +189,10 @@ extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource {
         eventOnDay(date: date)
     }
 
-
-    
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
        //здесь должна быть логика что если у нас есть событие на дату, то поставить точку
     
-        return 1
+        return 0
     }
     
   

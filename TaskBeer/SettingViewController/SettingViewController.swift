@@ -38,10 +38,8 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var lightBeerImageView: UIImageView!
     @IBOutlet weak var darkBeerImageView: UIImageView!
     
-//    var trigger: Bool?
-//    let appID = "1287000522"
-    
-    let helpThemeArray = ["Написать разработчику", "Поставить оценку", "Поделиться приложением", "Скинуть разработчику на пиво", "Сменить язык"]
+
+    let helpThemeArray = ["Написать разработчику", "Поставить оценку", "Поделиться приложением", "Скинуть разработчику на пиво"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +51,6 @@ class SettingViewController: UIViewController {
     }
     
     private func setupBeerImageView() {
-        
         
         
         lightBeerImageView.image = UIImage(named: "lightBeer")
@@ -142,11 +139,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             let okAction = UIAlertAction(title: "Плак-плак", style: .default, handler: nil)
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)
-        case [0,4]:
-            let alert = UIAlertController(title: "Смена языка в разработке", message: nil, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Хорошо", style: .default, handler: nil)
-            alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
+            
         default:
             print("SMTH")
         }
