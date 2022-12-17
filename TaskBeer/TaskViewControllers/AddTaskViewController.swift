@@ -87,7 +87,6 @@ class AddTaskViewController: UIViewController {
     }
  
      func saveButtonTapped() {
-   
            notificationCenter.getNotificationSettings { [self] (settings) in
                DispatchQueue.main.async {
                    if settings.authorizationStatus == .authorized {
@@ -194,10 +193,13 @@ extension AddTaskViewController {
                 let message = message
                 let date = date
                 
+            
+                //тут идет настройка инфы для напоминания по задаче 
                 if settings.authorizationStatus == .authorized {
                     let content = UNMutableNotificationContent()
                     content.title = title
                     content.body = message
+                    content.sound = .default
                     
                     let dateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
                     let trigger = UNCalendarNotificationTrigger(dateMatching: dateComp, repeats: false)

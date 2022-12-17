@@ -20,18 +20,24 @@ class SelfViewController: UIViewController {
     var currentEvent: CalendarModel?
     let calendarModel = CalendarModel()
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        keyboardApearChanges() //логика поднятия и исчезновения клавиатуры. Поместил сюда, а не во вьюДидЛоад, тк иначе при вставлении изображения с камеры не работал метод. Почему - так и не понял
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         saveButton.isEnabled = false
         
-        whatDrinkTF.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+       
         
+        whatDrinkTF.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         textFieldSetup()
         //editingChanged означает что работает селектор при редактировании
         setupEdtiScreen()
         
-        keyboardApearChanges() //логика поднятия и исчезновения клавиатуры
+       
         
         
     }
@@ -42,7 +48,6 @@ class SelfViewController: UIViewController {
         let camera = UIAlertAction(title: "Камера", style: .default) { _ in
             self.chooseImagePicker(source: .camera)
         }
-        
         
         let photo = UIAlertAction(title: "Фотогалерея", style: .default) { _ in
             self.chooseImagePicker(source: .photoLibrary)
@@ -125,10 +130,6 @@ class SelfViewController: UIViewController {
         if let topItem = navigationController?.navigationBar.topItem {
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         }
-        
-        //        //уберем кнопку cancel
-        //        navigationItem.leftBarButtonItem = nil
-        //        title = currentEvent?.whereDrink
         saveButton.isEnabled = true
     }
     

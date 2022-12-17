@@ -52,6 +52,7 @@ class BeerAlert {
         //текст
         
         let textLabel = UILabel(frame: CGRect(x: (alertView.frame.width * 0.2) / 2, y: 260, width: alertView.frame.width - 50, height: 60))
+        textLabel.font = UIFont(name: "Avenir Next", size: 20)
         textLabel.text = "Хорошо пивко, но надо поработать"
         textLabel.textColor = .white
         textLabel.numberOfLines = 0

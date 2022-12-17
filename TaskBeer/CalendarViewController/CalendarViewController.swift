@@ -75,7 +75,7 @@ class CalendarViewController: UIViewController {
         calendarView.appearance.headerTitleColor = UIColor(named: "calendarTitlesColor") // название месяцев
         calendarView.appearance.titleDefaultColor = UIColor(named: "calendarDatesColor") //даты
         calendarView.appearance.borderDefaultColor = UIColor(named: "calendarBorderColor")
-        calendarView.appearance.selectionColor = #colorLiteral(red: 1, green: 0.6497964263, blue: 0, alpha: 1)
+        calendarView.appearance.selectionColor = #colorLiteral(red: 0.9450980392, green: 0.5176470588, blue: 0.231372549, alpha: 1)
         calendarView.appearance.borderSelectionColor = .red
 
         

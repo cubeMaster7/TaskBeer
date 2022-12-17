@@ -38,7 +38,7 @@ class MainViewController: UIViewController {
         button.layer.borderWidth = 0.5
         button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 //        button.backgroundColor = #colorLiteral(red: 1, green: 0.3943974972, blue: 0.4663012028, alpha: 1)
-        button.backgroundColor = #colorLiteral(red: 1, green: 0.5843137255, blue: 0, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.5176470588, blue: 0.231372549, alpha: 1)
         button.setTitle(" К задаче ", for: .normal)
         button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +52,7 @@ class MainViewController: UIViewController {
         button.layer.borderWidth = 0.5
         button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.backgroundColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
-        button.setTitle("   По пивасу   ", for: .normal)
+        button.setTitle("   По пивку   ", for: .normal)
         button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(beerButtonTapped), for: .touchUpInside)
@@ -63,7 +63,7 @@ class MainViewController: UIViewController {
     private let addButtonVK: UIButton = {
         let button = UIButton(type: .custom)
         button.clipsToBounds = true
-        button.backgroundColor = #colorLiteral(red: 1, green: 0.5843137255, blue: 0, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.5176470588, blue: 0.231372549, alpha: 1)
         button.setImage(UIImage(named: "megaSuperBeer"), for: .normal)
 //        button.setTitle("+", for: .normal)
 //        button.titleLabel?.font = UIFont(name: "Avenir Next Bold", size: 60)
@@ -100,7 +100,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
 
-        navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 0.5843137255, blue: 0, alpha: 1) //меняет цвет кнопки возврата в навигейшен
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.9450980392, green: 0.5176470588, blue: 0.231372549, alpha: 1) //меняет цвет кнопки возврата в навигейшен
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil) //убирает надпись back в навигейшенконтроллере
 
 
