@@ -70,6 +70,7 @@ class CalendarViewController: UIViewController {
         calendarView.locale = Locale(identifier: "RU_ru")
         calendarView.appearance.caseOptions = .headerUsesCapitalized //месяц будет с большой буквы
         
+        calendarView.appearance.headerTitleFont = UIFont(name: "Avenir Next Bold", size: 20)
         calendarView.appearance.weekdayTextColor = UIColor(named: "calendarTitlesColor") // дни недели
         calendarView.appearance.headerTitleColor = UIColor(named: "calendarTitlesColor") // название месяцев
         calendarView.appearance.titleDefaultColor = UIColor(named: "calendarDatesColor") //даты

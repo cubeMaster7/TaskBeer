@@ -21,7 +21,7 @@ class CardTableViewController: UITableViewController {
     private let titlelabel:UILabel = {
         let label = UILabel()
         label.text = "Карточка события"
-        label.font = UIFont(name: "Avenir Next", size: 17)
+        label.font = UIFont(name: "Avenir Next Bold", size: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

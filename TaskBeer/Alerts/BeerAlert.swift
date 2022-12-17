@@ -19,7 +19,7 @@ class BeerAlert {
     
     private let alertView: UIView = {
         let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9294117647, blue: 0.8862745098, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         view.layer.cornerRadius = 20
         return view
     }()
@@ -37,20 +37,15 @@ class BeerAlert {
         backgroundView.frame = parentView.frame
         parentView.addSubview(backgroundView)
         
-        alertView.frame = CGRect(x: 40,
-                                 y: -420,
-                                 width: parentView.frame.width - 80,
-                                 height: 420)
+        alertView.frame = CGRect(x: 40, y: -420, width: parentView.frame.width - 80, height: 420)
         parentView.addSubview(alertView)
         
         
         //картинка
-        let beerImageView = UIImageView(frame: CGRect(x: (alertView.frame.width - alertView.frame.height * 0.4) / 2,
-                                                      y: 30,
-                                                      width: alertView.frame.height * 0.4,
-                                                      height: alertView.frame.height * 0.5))
-        beerImageView.image = UIImage(named: "fullBeer")
+        let beerImageView = UIImageView(frame: CGRect(x: 60 , y: 50, width: 200 , height: 200))
+        beerImageView.image = UIImage(named: "megaSuperBeer")
         beerImageView.contentMode = .scaleAspectFill
+        beerImageView.clipsToBounds = true
         
         alertView.addSubview(beerImageView)
         
@@ -58,25 +53,22 @@ class BeerAlert {
         
         let textLabel = UILabel(frame: CGRect(x: (alertView.frame.width * 0.2) / 2, y: 260, width: alertView.frame.width - 50, height: 60))
         textLabel.text = "Хорошо пивко, но надо поработать"
+        textLabel.textColor = .white
         textLabel.numberOfLines = 0
         textLabel.textAlignment = .center
         alertView.addSubview(textLabel)
         
         //кнопка
         
-        let okButton = UIButton(frame: CGRect(x: 50,
-                                              y: 350,
-                                              width: alertView.frame.width - 100,
-                                              height: 35))
-        okButton.backgroundColor = #colorLiteral(red: 0.2, green: 0.5529411765, blue: 0.4901960784, alpha: 1)
+        let okButton = UIButton(frame: CGRect(x: 50, y: 350, width: alertView.frame.width - 100,height: 35))
+        okButton.backgroundColor = #colorLiteral(red: 0.2745098039, green: 0.4862745098, blue: 0.1411764706, alpha: 1)
         okButton.setTitle("Пора поработать", for: .normal)
-        okButton.titleLabel?.textColor = .white
         okButton.titleLabel?.font = UIFont(name: "Avenir Next", size: 17)
         okButton.layer.cornerRadius = 10
         okButton.addTarget(self, action: #selector(dismissAlert), for: .touchUpInside)
         alertView.addSubview(okButton)
         
-        
+        // работа анимации
         UIView.animate(withDuration: 0.3) {
             self.backgroundView.alpha = 0.8
         } completion: { done in

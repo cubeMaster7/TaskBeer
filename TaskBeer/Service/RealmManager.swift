@@ -12,11 +12,6 @@ let realm = try! Realm()
 
 class RealmManager {
     
-//    static let shared = RealmManager()
-//
-//    private init() {}
-//
-//    let localRealm = try! Realm()
     
     
     //MARK: - методы для TaskModel

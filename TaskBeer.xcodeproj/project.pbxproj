@@ -43,7 +43,6 @@
 		7B0ED5B5293E83BC0077FE17 /* BeerAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAlert.swift; sourceTree = "<group>"; };
 		7B926780294BB04D00D19B90 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		7B926781294BB04D00D19B90 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		7B92678A294BB0FB00D19B90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		7B92F2FF2916FD9800FDC9CA /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		7B92F3032916FDC500FDC9CA /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		7B92F307291702F700FDC9CA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -344,7 +343,6 @@
 			children = (
 				7BEABF4B2916F71500726E5E /* Base */,
 				7B926780294BB04D00D19B90 /* ru */,
-				7B92678A294BB0FB00D19B90 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

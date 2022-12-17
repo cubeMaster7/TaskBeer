@@ -35,7 +35,10 @@ class MainViewController: UIViewController {
     private let addTaskButton: UIButton = {
         let button = UIButton(type: .system)
         button.layer.cornerRadius = 10
-        button.backgroundColor = #colorLiteral(red: 1, green: 0.3943974972, blue: 0.4663012028, alpha: 1)
+        button.layer.borderWidth = 0.5
+        button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//        button.backgroundColor = #colorLiteral(red: 1, green: 0.3943974972, blue: 0.4663012028, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 1, green: 0.5843137255, blue: 0, alpha: 1)
         button.setTitle(" К задаче ", for: .normal)
         button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -46,6 +49,8 @@ class MainViewController: UIViewController {
     private let beerButton: UIButton = {
         var button = UIButton(type: .system)
         button.layer.cornerRadius = 10
+        button.layer.borderWidth = 0.5
+        button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.backgroundColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
         button.setTitle("   По пивасу   ", for: .normal)
         button.tintColor = .white
@@ -57,12 +62,11 @@ class MainViewController: UIViewController {
     //кнопка на основном вью для добавления задач
     private let addButtonVK: UIButton = {
         let button = UIButton(type: .custom)
-        button.layer.cornerRadius = 15
-        button.backgroundColor = #colorLiteral(red: 1, green: 0.5843137255, blue: 0, alpha: 1)
-//        button.setImage(UIImage(named: "plus"), for: .normal)
-        button.setTitle("+", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Avenir Next Bold", size: 60)
         button.clipsToBounds = true
+        button.backgroundColor = #colorLiteral(red: 1, green: 0.5843137255, blue: 0, alpha: 1)
+        button.setImage(UIImage(named: "megaSuperBeer"), for: .normal)
+//        button.setTitle("+", for: .normal)
+//        button.titleLabel?.font = UIFont(name: "Avenir Next Bold", size: 60)
         button.layer.borderWidth = 1
         button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -83,6 +87,9 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        addButtonVK.layer.cornerRadius = addButtonVK.frame.size.height/2 //сделал круглую кнопку, в другом месте не работает
+
+        
         hasAnyTask()
         setCountRows()
         tableView.reloadData()
@@ -92,6 +99,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 0.5843137255, blue: 0, alpha: 1) //меняет цвет кнопки возврата в навигейшен
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil) //убирает надпись back в навигейшенконтроллере
 
@@ -123,6 +131,7 @@ class MainViewController: UIViewController {
         
     }
     
+    //если нет задач, то скрывает или показывает элементы
     private func hasAnyTask() {
         if taskArray.count == 0 {
             tableView.isHidden = true
@@ -251,11 +260,13 @@ extension MainViewController {
         NSLayoutConstraint.activate([
             addButtonVK.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             addButtonVK.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -85),
-            addButtonVK.widthAnchor.constraint(equalToConstant: 50),
-            addButtonVK.heightAnchor.constraint(equalToConstant: 50)
+            addButtonVK.widthAnchor.constraint(equalToConstant: 65),
+            addButtonVK.heightAnchor.constraint(equalToConstant: 65)
         ])
     }
 }
+
+// MARK: - Кнопка которая актив и не актив
 
 extension MainViewController: PressReadyButtonProtocol {
 func readyButtonTapped(indexPath: IndexPath) {

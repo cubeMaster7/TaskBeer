@@ -38,7 +38,6 @@ class AddTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         textFieldSetup()
         setupView()
         
@@ -50,9 +49,7 @@ class AddTaskViewController: UIViewController {
         showDateSwitch.isOn = false  //параметр свитча
         datePicker.isHidden = true
         showDateSwitch.addTarget(self, action: #selector(showDateSwitchChanged), for: .valueChanged)
-        
     }
-    
     
     private func textFieldSetup() {
 
@@ -120,8 +117,8 @@ class AddTaskViewController: UIViewController {
     }
     
     private func isTextFieldIsEmpty() {
-        let alert = UIAlertController(title: "Бро, ты че, пьян?", message: "Напиши задачу! Иначе не сохранится", preferredStyle: .alert)
-        let okAlert = UIAlertAction(title: "Понял", style: .default, handler: nil)
+        let alert = UIAlertController(title: "Вы что, уже пьяны?", message: "Напишите задачу! Иначе ничего не сохранится", preferredStyle: .alert)
+        let okAlert = UIAlertAction(title: "Ваше здоровье, друзья", style: .default, handler: nil)
         alert.addAction(okAlert)
         present(alert, animated: true, completion: nil)
     }
@@ -137,11 +134,7 @@ class AddTaskViewController: UIViewController {
         }
     }
     
-    func notificationLogic() {
-        let message = self.taskTextField.text!
-        let date = self.datePicker.date
-        scheduleDateNotification(date: date, message: message)
-    }
+    
     
     //MARK: работа кнопки готово
     @IBAction func gotovoButtonTapped(_ sender: Any) {
@@ -162,6 +155,8 @@ class AddTaskViewController: UIViewController {
     
     
 }
+
+//MARK: - TextField delegate
 
 extension AddTaskViewController: UITextFieldDelegate {
     //когда нажимамем на done клава скрывается
@@ -184,11 +179,18 @@ extension AddTaskViewController: UITextFieldDelegate {
 
 //MARK: доп.настройка уведомлений
 extension AddTaskViewController {
+    
+    func notificationLogic() {
+        let message = self.taskTextField.text!
+        let date = self.datePicker.date
+        scheduleDateNotification(date: date, message: message)
+    }
+    
     func scheduleDateNotification(date: Date, message: String) {
         
         notificationCenter.getNotificationSettings { (settings) in
             DispatchQueue.main.async {
-                let title = "Бро, напоминаю"
+                let title = "TaskBeer напоминает"
                 let message = message
                 let date = date
                 
@@ -211,9 +213,9 @@ extension AddTaskViewController {
             }
         }
     }
-    
+
     func ifAuthorisationDenied() {
-        let ac = UIAlertController(title: "Включить уведомления?", message: "Чтобы пользоваться напоминаниями, включите уведомления в настройках", preferredStyle: .alert)
+        let ac = UIAlertController(title: "Включить уведомления?", message: "Чтобы использовать напоминания, включите уведомления в настройках", preferredStyle: .alert)
         let goToSettings = UIAlertAction(title: "Настройки", style: .default) { _ in
             guard let settingURL = URL(string: UIApplication.openSettingsURLString) else {return}
             
