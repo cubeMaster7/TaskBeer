@@ -77,6 +77,8 @@ class CalendarViewController: UIViewController {
         calendarView.appearance.borderDefaultColor = UIColor(named: "calendarBorderColor")
         calendarView.appearance.selectionColor = #colorLiteral(red: 0.9450980392, green: 0.5176470588, blue: 0.231372549, alpha: 1)
         calendarView.appearance.borderSelectionColor = .red
+        calendarView.appearance.eventOffset = CGPoint(x: 0, y: -7) //это для точек событий
+//        calendarView.register(DIYCalendarCell.self, forCellReuseIdentifier: "cell") //попытка сделать серыми ячейки
 
         
 //        calendarView.calendarHeaderView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
@@ -185,6 +187,13 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
 //MARK: FS Calendar delegate and dataSource
 
 extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource {
+    
+    //для активации бэкграунд цвета в ячейках
+    
+//    func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
+//        let cell = calendar.dequeueReusableCell(withIdentifier: "cell", for: date, at: position)
+//        return cell
+//    }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         eventOnDay(date: date)

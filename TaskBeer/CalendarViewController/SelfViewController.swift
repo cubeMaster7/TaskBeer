@@ -223,7 +223,7 @@ extension SelfViewController {
     
     @objc func keyboardWillChange(notification: NSNotification) {
         
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+        if ((notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue) != nil {
             if whereDrinkTF.isFirstResponder {
                 self.view.frame.origin.y = -120
             }

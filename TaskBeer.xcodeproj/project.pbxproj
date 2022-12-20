@@ -13,6 +13,7 @@
 		7B0ED5B1293CA4970077FE17 /* SelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0ED5B0293CA4970077FE17 /* SelfViewController.swift */; };
 		7B0ED5B3293CA6B00077FE17 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0ED5B2293CA6B00077FE17 /* CardTableViewController.swift */; };
 		7B0ED5B6293E83BC0077FE17 /* BeerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0ED5B5293E83BC0077FE17 /* BeerAlert.swift */; };
+		7B3484BA29524C86000386D8 /* DIYCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3484B929524C86000386D8 /* DIYCalendarCell.swift */; };
 		7B92F3002916FD9800FDC9CA /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F2FF2916FD9800FDC9CA /* TaskTableViewCell.swift */; };
 		7B92F3042916FDC500FDC9CA /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F3032916FDC500FDC9CA /* AddTaskViewController.swift */; };
 		7B92F308291702F700FDC9CA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F307291702F700FDC9CA /* RealmManager.swift */; };
@@ -41,6 +42,7 @@
 		7B0ED5B0293CA4970077FE17 /* SelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfViewController.swift; sourceTree = "<group>"; };
 		7B0ED5B2293CA6B00077FE17 /* CardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewController.swift; sourceTree = "<group>"; };
 		7B0ED5B5293E83BC0077FE17 /* BeerAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAlert.swift; sourceTree = "<group>"; };
+		7B3484B929524C86000386D8 /* DIYCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYCalendarCell.swift; sourceTree = "<group>"; };
 		7B926780294BB04D00D19B90 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		7B926781294BB04D00D19B90 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7B92F2FF2916FD9800FDC9CA /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0ED5AB293CA2E50077FE17 /* EventTableViewCell.swift */,
+				7B3484B929524C86000386D8 /* DIYCalendarCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				7B0ED5B1293CA4970077FE17 /* SelfViewController.swift in Sources */,
 				7BEABF472916F71500726E5E /* SceneDelegate.swift in Sources */,
 				7B92F3042916FDC500FDC9CA /* AddTaskViewController.swift in Sources */,
+				7B3484BA29524C86000386D8 /* DIYCalendarCell.swift in Sources */,
 				7B92F308291702F700FDC9CA /* RealmManager.swift in Sources */,
 				7B0ED5B6293E83BC0077FE17 /* BeerAlert.swift in Sources */,
 				7B92F3402919933800FDC9CA /* CalendarViewController.swift in Sources */,
@@ -487,7 +491,8 @@
 				DEVELOPMENT_TEAM = VY7N45S8K7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskBeer/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) photo use";
+				INFOPLIST_KEY_CFBundleDisplayName = BeerTask;
+				INFOPLIST_KEY_NSCameraUsageDescription = "TaskBeer photo use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -517,7 +522,8 @@
 				DEVELOPMENT_TEAM = VY7N45S8K7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskBeer/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) photo use";
+				INFOPLIST_KEY_CFBundleDisplayName = BeerTask;
+				INFOPLIST_KEY_NSCameraUsageDescription = "TaskBeer photo use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
