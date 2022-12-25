@@ -24,7 +24,6 @@ class CardTableViewController: UITableViewController {
     }()
     
     var selectedIndex: CalendarModel?
-    var editIndex: CalendarModel?
     
         
     override func viewDidLoad() {
@@ -40,10 +39,6 @@ class CardTableViewController: UITableViewController {
         whatDrinkLabel.text = selectedIndex?.whatDrink
         whereDrinkLabel.text = selectedIndex?.whereDrink
         howMuchDrinkLabel.text = selectedIndex?.amountOfAlcohol
-        
-//        whatDrinkTF.text = selectedIndex?.whatDrink
-//        whereDrinkTF.text = selectedIndex?.whereDrink
-//        howMuchDrinkTF.text = selectedIndex?.amountOfAlcohol
 
         guard let data = selectedIndex?.imageData, let image = UIImage(data: data) else {return}
         imageView.image = image
@@ -74,10 +69,8 @@ class CardTableViewController: UITableViewController {
     
     
     @IBAction func editButton(_ sender: Any) {
-
-
         if let vc = storyboard?.instantiateViewController(withIdentifier: "editID") as? SelfViewController {
-            vc.currentEvent = editIndex
+            vc.currentEvent = selectedIndex
             present(vc, animated: true, completion: nil)
         }
     }

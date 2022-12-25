@@ -118,7 +118,7 @@ class CalendarViewController: UIViewController {
             let detailVC = segue.destination as? CardTableViewController
             detailVC?.selectedIndex = calendarArray[indexPath.row]
             //тестовое
-            detailVC?.editIndex = calendarArray[indexPath.row]
+//            detailVC?.editIndex = calendarArray[indexPath.row]
         }
     }
     
@@ -174,9 +174,18 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         return UISwipeActionsConfiguration(actions: [deleceAction])
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 60
+        return UITableView.automaticDimension
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 80
+//    }
     
     
 }
@@ -199,9 +208,6 @@ extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource {
     //здесь должна быть логика что если у нас есть событие на дату, то поставить точку
 
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-    
         return 0
     }
-    
-  
 }

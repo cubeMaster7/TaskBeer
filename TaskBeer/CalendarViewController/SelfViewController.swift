@@ -29,16 +29,10 @@ class SelfViewController: UIViewController {
         super.viewDidLoad()
         
         saveButton.isEnabled = false
-        
-       
-        
         whatDrinkTF.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         textFieldSetup()
         //editingChanged означает что работает селектор при редактировании
-        setupEdtiScreen()
-        
-       
-        
+        setupEditScreen()
         
     }
 
@@ -106,7 +100,7 @@ class SelfViewController: UIViewController {
         }
     }
     
-    private func setupEdtiScreen() {
+    private func setupEditScreen() {
         if currentEvent != nil { //если не равно nil, значит мы в окне редактирования
             //здесь мы преобразовываем дата картинку в просто картинку
             
@@ -120,7 +114,7 @@ class SelfViewController: UIViewController {
             amountOfAlcoholTF.text = currentEvent?.amountOfAlcohol
             whereDrinkTF.text = currentEvent?.whereDrink
             
-            guard let dateEvent = currentEvent?.date else {return}
+            guard let dateEvent = currentEvent?.calendarDate else {return}
             datePicker.date = dateEvent
         }
     }
