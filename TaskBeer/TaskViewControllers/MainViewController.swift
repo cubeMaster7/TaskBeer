@@ -110,6 +110,7 @@ class MainViewController: UIViewController {
         tableView.dataSource = self
 //        tableView.bounces = false
         
+        
         setupView()
         
     }
@@ -211,14 +212,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    
+    //с помощью этих двух строчек сделали, что высота автоматически в ячейке меняется. Я сделал стэкВью и установил там высоту, чтобы если что она менялась. Само свойство у стэкВЬю fill, иначе ячейка слишком растягивается
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 60
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteRow = taskArray[indexPath.row]
         let deleteAction = UIContextualAction(style: .destructive, title: "Красава!") { _, _, _ in
-//            RealmManager.shared.deleteTaskModel(model: deleteRow)
             RealmManager.deleteTaskModel(model: deleteRow)
             self.hasAnyTask()
             self.setCountRows()

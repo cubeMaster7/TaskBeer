@@ -15,9 +15,12 @@ class DIYCalendarCell: FSCalendarCell {
         super.init(frame: frame)
         
         let view = UIView(frame: self.bounds)
-        view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.12)
-        view.layer.cornerRadius = 15
-        self.backgroundView = view;
+//        view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.12)
+        view.backgroundColor = UIColor.gray.withAlphaComponent(0.12)
+//        view.layer.cornerRadius = view.bounds.size.height / 2
+        
+        self.backgroundView = view
+    
     }
     
     required init!(coder aDecoder: NSCoder!) {

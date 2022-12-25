@@ -10,9 +10,6 @@ import RealmSwift
 
 class CardTableViewController: UITableViewController {
 
-//    @IBOutlet weak var whatDrinkTF: UITextField!
-//    @IBOutlet weak var whereDrinkTF: UITextField!
-//    @IBOutlet weak var howMuchDrinkTF: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var whatDrinkLabel: UILabel!
     @IBOutlet weak var whereDrinkLabel: UILabel!
@@ -63,9 +60,7 @@ class CardTableViewController: UITableViewController {
     @IBAction func imageButtonPressed(_ sender: Any) {
         
         let vc = ImageViewController()
-//        vc.selectedIndex = indexPath.row
         vc.imageCard = selectedIndex
-//        pushView(viewController: vc)
         present(vc, animated: true, completion: nil)
     }
     
@@ -86,14 +81,7 @@ class CardTableViewController: UITableViewController {
             present(vc, animated: true, completion: nil)
         }
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//       if segue.identifier == "editSegue" {
-//           let vc = segue.destination as? AddEventTableViewController
-//           vc?.currentEvent = selectedIndex
-//       }
-//   }
-    
+
     
     @IBAction func shareButtonTapped(_ sender: Any) {
         if let name = URL(string: "https://itunes.apple.com/us/app/myapp/idxxxxxxxx?ls=1&mt=8"), !name.absoluteString.isEmpty {

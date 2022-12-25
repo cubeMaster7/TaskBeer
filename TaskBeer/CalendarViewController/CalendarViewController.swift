@@ -74,16 +74,13 @@ class CalendarViewController: UIViewController {
         calendarView.appearance.weekdayTextColor = UIColor(named: "calendarTitlesColor") // дни недели
         calendarView.appearance.headerTitleColor = UIColor(named: "calendarTitlesColor") // название месяцев
         calendarView.appearance.titleDefaultColor = UIColor(named: "calendarDatesColor") //даты
-        calendarView.appearance.borderDefaultColor = UIColor(named: "calendarBorderColor")
-        calendarView.appearance.selectionColor = #colorLiteral(red: 0.9450980392, green: 0.5176470588, blue: 0.231372549, alpha: 1)
-        calendarView.appearance.borderSelectionColor = .red
-        calendarView.appearance.eventOffset = CGPoint(x: 0, y: -7) //это для точек событий
-//        calendarView.register(DIYCalendarCell.self, forCellReuseIdentifier: "cell") //попытка сделать серыми ячейки
+//        calendarView.appearance.borderDefaultColor = UIColor(named: "calendarBorderColor")
+//        calendarView.appearance.borderSelectionColor = .red
 
-        
-//        calendarView.calendarHeaderView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
-//        calendarView.calendarWeekdayView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
-//        calendarView.select(Date())//делает выделенным текущий день. Но не активирует его
+        calendarView.appearance.selectionColor = #colorLiteral(red: 0.9450980392, green: 0.5176470588, blue: 0.231372549, alpha: 1)
+        calendarView.appearance.eventOffset = CGPoint(x: 0, y: 0) //это для точек событий
+        calendarView.register(DIYCalendarCell.self, forCellReuseIdentifier: "cell") //попытка сделать серыми ячейки
+
         
     }
     
@@ -190,17 +187,18 @@ extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource {
     
     //для активации бэкграунд цвета в ячейках
     
-//    func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
-//        let cell = calendar.dequeueReusableCell(withIdentifier: "cell", for: date, at: position)
-//        return cell
-//    }
+    func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
+        let cell = calendar.dequeueReusableCell(withIdentifier: "cell", for: date, at: position)
+        return cell
+    }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         eventOnDay(date: date)
     }
 
+    //здесь должна быть логика что если у нас есть событие на дату, то поставить точку
+
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-       //здесь должна быть логика что если у нас есть событие на дату, то поставить точку
     
         return 0
     }

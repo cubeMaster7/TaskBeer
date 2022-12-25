@@ -23,9 +23,7 @@
 		7B92F31329170BD300FDC9CA /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F31229170BD300FDC9CA /* Notifications.swift */; };
 		7B92F3162917C9CA00FDC9CA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F3152917C9CA00FDC9CA /* SettingViewController.swift */; };
 		7B92F3182917CC7400FDC9CA /* MTUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F3172917CC7400FDC9CA /* MTUserDefaults.swift */; };
-		7B92F33D29197EB600FDC9CA /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F33C29197EB600FDC9CA /* HelpTableViewCell.swift */; };
 		7B92F3402919933800FDC9CA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92F33F2919933800FDC9CA /* CalendarViewController.swift */; };
-		7BBE3689294127720000F228 /* AddEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE3688294127720000F228 /* AddEventTableViewController.swift */; };
 		7BBE368C2945111A0000F228 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE368B2945111A0000F228 /* ImageViewController.swift */; };
 		7BEABF452916F71500726E5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEABF442916F71500726E5E /* AppDelegate.swift */; };
 		7BEABF472916F71500726E5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEABF462916F71500726E5E /* SceneDelegate.swift */; };
@@ -54,9 +52,7 @@
 		7B92F31229170BD300FDC9CA /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		7B92F3152917C9CA00FDC9CA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		7B92F3172917CC7400FDC9CA /* MTUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTUserDefaults.swift; sourceTree = "<group>"; };
-		7B92F33C29197EB600FDC9CA /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
 		7B92F33F2919933800FDC9CA /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		7BBE3688294127720000F228 /* AddEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventTableViewController.swift; sourceTree = "<group>"; };
 		7BBE368B2945111A0000F228 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		7BEABF412916F71500726E5E /* TaskBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BEABF442916F71500726E5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,17 +158,8 @@
 			children = (
 				7B92F3152917C9CA00FDC9CA /* SettingViewController.swift */,
 				7B92F3172917CC7400FDC9CA /* MTUserDefaults.swift */,
-				7B92F33B29197E9900FDC9CA /* Cell */,
 			);
 			path = SettingViewController;
-			sourceTree = "<group>";
-		};
-		7B92F33B29197E9900FDC9CA /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				7B92F33C29197EB600FDC9CA /* HelpTableViewCell.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		7B92F33E2919931F00FDC9CA /* CalendarViewController */ = {
@@ -183,17 +170,8 @@
 				7B0ED5B2293CA6B00077FE17 /* CardTableViewController.swift */,
 				7BBE368B2945111A0000F228 /* ImageViewController.swift */,
 				7B0ED5AA293CA2C30077FE17 /* Cells */,
-				7BBE368A294134770000F228 /* ReservedViewController */,
 			);
 			path = CalendarViewController;
-			sourceTree = "<group>";
-		};
-		7BBE368A294134770000F228 /* ReservedViewController */ = {
-			isa = PBXGroup;
-			children = (
-				7BBE3688294127720000F228 /* AddEventTableViewController.swift */,
-			);
-			path = ReservedViewController;
 			sourceTree = "<group>";
 		};
 		7BEABF382916F71500726E5E = {
@@ -325,8 +303,6 @@
 				7B0ED5AC293CA2E50077FE17 /* EventTableViewCell.swift in Sources */,
 				7BEABF452916F71500726E5E /* AppDelegate.swift in Sources */,
 				7BBE368C2945111A0000F228 /* ImageViewController.swift in Sources */,
-				7BBE3689294127720000F228 /* AddEventTableViewController.swift in Sources */,
-				7B92F33D29197EB600FDC9CA /* HelpTableViewCell.swift in Sources */,
 				7B0ED5B1293CA4970077FE17 /* SelfViewController.swift in Sources */,
 				7BEABF472916F71500726E5E /* SceneDelegate.swift in Sources */,
 				7B92F3042916FDC500FDC9CA /* AddTaskViewController.swift in Sources */,
