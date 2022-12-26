@@ -209,10 +209,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H6B-v7-INp">
-                                <rect key="frame" x="0.0" y="439" width="414" height="175"/>
+                                <rect key="frame" x="0.0" y="439" width="414" height="132"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="JcZ-by-FvG"/>
+                                    <constraint firstAttribute="height" constant="132" id="JcZ-by-FvG"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="swb-9R-v0X" customClass="HelpTableViewCell" customModule="TaskBeer" customModuleProvider="target">
@@ -779,10 +779,10 @@
                                             <constraints>
                                                 <constraint firstItem="8QN-Rc-g0n" firstAttribute="top" secondItem="CUl-8j-nO2" secondAttribute="top" constant="2" id="4XC-Fc-TpP"/>
                                                 <constraint firstAttribute="trailing" secondItem="8QN-Rc-g0n" secondAttribute="trailing" constant="20" id="56g-jV-Gr2"/>
-                                                <constraint firstItem="8QN-Rc-g0n" firstAttribute="leading" secondItem="CUl-8j-nO2" secondAttribute="leading" constant="20" symbolic="YES" id="BkL-l5-gwb"/>
+                                                <constraint firstItem="8QN-Rc-g0n" firstAttribute="leading" secondItem="CUl-8j-nO2" secondAttribute="leading" constant="20" id="BkL-l5-gwb"/>
                                                 <constraint firstAttribute="trailing" secondItem="KlO-3L-8y2" secondAttribute="trailing" constant="20" id="COM-c6-UBS"/>
                                                 <constraint firstItem="KlO-3L-8y2" firstAttribute="top" secondItem="8QN-Rc-g0n" secondAttribute="bottom" constant="2" id="fP7-qg-uhP"/>
-                                                <constraint firstItem="KlO-3L-8y2" firstAttribute="leading" secondItem="CUl-8j-nO2" secondAttribute="leading" constant="20" symbolic="YES" id="jyE-ju-ZMF"/>
+                                                <constraint firstItem="KlO-3L-8y2" firstAttribute="leading" secondItem="CUl-8j-nO2" secondAttribute="leading" constant="20" id="jyE-ju-ZMF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -809,9 +809,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="AgS-XH-Lq3" firstAttribute="top" secondItem="MiH-dC-aZk" secondAttribute="top" constant="2" id="FaY-gZ-Reh"/>
-                                                <constraint firstItem="AgS-XH-Lq3" firstAttribute="leading" secondItem="MiH-dC-aZk" secondAttribute="leading" constant="20" symbolic="YES" id="R3X-iY-skI"/>
+                                                <constraint firstItem="AgS-XH-Lq3" firstAttribute="leading" secondItem="MiH-dC-aZk" secondAttribute="leading" constant="20" id="R3X-iY-skI"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="JKc-Ls-bIu" secondAttribute="trailing" constant="20" id="cCp-zc-XGr"/>
-                                                <constraint firstItem="JKc-Ls-bIu" firstAttribute="leading" secondItem="MiH-dC-aZk" secondAttribute="leadingMargin" id="ese-HQ-xIp"/>
+                                                <constraint firstItem="JKc-Ls-bIu" firstAttribute="leading" secondItem="MiH-dC-aZk" secondAttribute="leading" constant="20" id="ese-HQ-xIp"/>
                                                 <constraint firstItem="JKc-Ls-bIu" firstAttribute="top" secondItem="AgS-XH-Lq3" secondAttribute="bottom" constant="2" id="gkL-nB-hRc"/>
                                                 <constraint firstAttribute="trailing" secondItem="AgS-XH-Lq3" secondAttribute="trailing" constant="20" id="lxk-6o-et5"/>
                                             </constraints>
@@ -841,9 +841,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="HTK-IK-mhG" secondAttribute="trailing" constant="20" id="Hq4-qj-B1m"/>
                                                 <constraint firstItem="d3j-Ft-9pJ" firstAttribute="top" secondItem="pt6-r7-8M4" secondAttribute="top" constant="2" id="IWj-1c-oNO"/>
-                                                <constraint firstItem="d3j-Ft-9pJ" firstAttribute="leading" secondItem="pt6-r7-8M4" secondAttribute="leading" constant="20" symbolic="YES" id="gph-7B-TPY"/>
+                                                <constraint firstItem="d3j-Ft-9pJ" firstAttribute="leading" secondItem="pt6-r7-8M4" secondAttribute="leading" constant="20" id="gph-7B-TPY"/>
                                                 <constraint firstItem="HTK-IK-mhG" firstAttribute="top" secondItem="d3j-Ft-9pJ" secondAttribute="bottom" constant="2" id="qvR-ZR-adQ"/>
-                                                <constraint firstItem="HTK-IK-mhG" firstAttribute="leading" secondItem="pt6-r7-8M4" secondAttribute="leadingMargin" id="w6f-pa-SQW"/>
+                                                <constraint firstItem="HTK-IK-mhG" firstAttribute="leading" secondItem="pt6-r7-8M4" secondAttribute="leading" constant="20" id="w6f-pa-SQW"/>
                                                 <constraint firstAttribute="trailing" secondItem="d3j-Ft-9pJ" secondAttribute="trailing" constant="20" id="wPc-MD-7wg"/>
                                             </constraints>
                                         </tableViewCellContentView>

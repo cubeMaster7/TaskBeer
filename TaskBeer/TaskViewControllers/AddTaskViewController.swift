@@ -189,7 +189,7 @@ extension AddTaskViewController {
         
         notificationCenter.getNotificationSettings { (settings) in
             DispatchQueue.main.async {
-                let title = "TaskBeer напоминает"
+                let title = "BeerTask напоминает"
                 let message = message
                 let date = date
                 

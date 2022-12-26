@@ -39,7 +39,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var darkBeerImageView: UIImageView!
     
 
-    let helpThemeArray = ["Написать разработчику", "Поставить оценку", "Поделиться приложением", "Скинуть разработчику на пиво"]
+    let helpThemeArray = ["Написать разработчику", "Поставить оценку", "Поделиться приложением"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,7 +123,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             //            let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
             //            present(vc, animated: true)
             
-            if let name = URL(string: "https://itunes.apple.com/us/app/myapp/idxxxxxxxx?ls=1&mt=8"), !name.absoluteString.isEmpty {
+            if let name = URL(string: "https://itunes.apple.com/us/app/myapp/id"), !name.absoluteString.isEmpty {
                 let objectsToShare = [name]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
                 self.present(activityVC, animated: true, completion: nil)
@@ -133,12 +133,6 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 alert.addAction(okAction)
                 present(alert, animated: true, completion: nil)
             }
-            
-        case [0,3]:
-            let alert = UIAlertController(title: "Копилка в разработке", message: "Спасибо, котятки, но пока что вы можете только написать разработчику", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Плак-плак", style: .default, handler: nil)
-            alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
             
         default:
             print("SMTH")
