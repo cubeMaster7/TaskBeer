@@ -123,7 +123,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             //            let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
             //            present(vc, animated: true)
             
-            if let name = URL(string: "https://itunes.apple.com/us/app/myapp/id"), !name.absoluteString.isEmpty {
+            if let name = URL(string: "https://itunes.apple.com/us/app/myapp/id1661477534"), !name.absoluteString.isEmpty {
                 let objectsToShare = [name]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
                 self.present(activityVC, animated: true, completion: nil)
